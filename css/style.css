@@ -410,7 +410,9 @@ svg {
   .hero-parallax__title {
     font-size: 96px;
   }
+}
 
+@media (max-width: 1440px) and (min-height: 700px) {
   .parallax-scene__right-buildings {
     width: 33.265%;
   }
