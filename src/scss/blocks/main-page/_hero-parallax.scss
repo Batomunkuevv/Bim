@@ -7,11 +7,15 @@
     justify-content: center;
 
     &__body {
-        margin-top: -20px;
+        margin-top: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @media (max-height: 750px) {
+            margin-top: 30px;
+        }
     }
 
     &__container {
@@ -73,10 +77,10 @@
         bottom: -10%;
         left: 77.8%;
         transform: translateX(-50%);
-        width: 28.065%;
+        width: 30.065%;
 
-        @media (max-width: 1440px) and (min-height: 700px) {
-            width: 33.265%;
+        @media (max-height: 750px) {
+            width: 27.065%;
         }
 
         & img {
@@ -86,10 +90,16 @@
 
     &__evolution {
         position: absolute;
-        bottom: -14%;
-        left: 86.2%;
+        bottom: -17%;
+        left: 87.7%;
         transform: translateX(-50%);
-        width: 10%;
+        width: 12%;
+
+        @media (max-height: 750px) {
+            width: 9%;
+            bottom: -13%;
+            left: 86.5%;
+        }
 
         & img {
             width: 100%;
@@ -101,7 +111,11 @@
         bottom: -10%;
         left: 66.4%;
         transform: translateX(-50%);
-        width: 7.5%;
+        width: 9.5%;
+
+        @media (max-height: 750px) {
+            width: 6.5%;
+        }
 
         & img {
             width: 100%;
@@ -132,10 +146,16 @@
 
     &__oko {
         position: absolute;
-        bottom: -15%;
+        bottom: -19%;
         left: 15.3%;
         transform: translate(-50%);
-        width: 8.92%;
+        width: 10.92%;
+
+        @media (max-height: 750px) {
+            width: 7.92%;
+            left: 15.4%;
+            bottom: -8%;
+        }
 
         & img {
             width: 100%;
@@ -147,7 +167,11 @@
         bottom: -11%;
         left: 24.5%;
         transform: translateX(-50%);
-        width: 30.261%;
+        width: 32.261%;
+
+        @media (max-height: 750px) {
+            width: 29.261%;
+        }
 
         & img {
             width: 100%;
@@ -156,10 +180,15 @@
 
     &__eurasia {
         position: absolute;
-        bottom: -13.2%;
+        bottom: -17.2%;
         left: 29%;
         transform: translateX(-50%);
-        width: 13.334%;
+        width: 15.334%;
+
+        @media (max-height: 750px) {
+            width: 12.334%;
+            bottom: -10%;
+        }
 
         & img {
             width: 100%;
@@ -171,7 +200,12 @@
         bottom: -8%;
         left: 22%;
         transform: translateX(-50%);
-        width: 16.2%;
+        width: 18.2%;
+
+        @media (max-height: 750px) {
+            width: 15.5%;
+            left: 22.2%;
+        }
 
         & img {
             width: 100%;
@@ -190,10 +224,14 @@
         bottom: -10%;
         left: 50.3%;
         transform: translateX(-49%);
-        width: 28.45%;
+        width: 30.45%;
 
-        @media (max-width: 1440px) and (min-height: 700px) {
-            width: 31.45%;
+        @media (max-height: 750px) {
+            width: 27.45%;
+        }
+
+        @media (max-height: 700px) {
+            width: 25.45%;
         }
 
         & img {
@@ -207,10 +245,15 @@
         left: 51.1%;
         transform: translateX(-50%);
         z-index: 2;
-        width: 22.71%;
+        width: 24.7%;
 
-        @media (max-width: 1440px) and (min-height: 700px) {
-            width: 25.71%;
+        @media (max-height: 750px) {
+            width: 21.71%;
+        }
+
+        @media (max-height: 700px) {
+            width: 19.71%;
+            bottom: -8.4%;
         }
 
         & img {

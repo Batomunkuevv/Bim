@@ -5,7 +5,7 @@ const initParallax = () => {
 
     if (!parallaxSection) return;
 
-    const parallaxElements = document.querySelectorAll('[data-parallax]');
+    const parallaxElements = parallaxSection.querySelectorAll('[data-parallax]');
 
     parallaxSection.addEventListener('mousemove', moveParallaxElements);
 
@@ -26,11 +26,15 @@ const initParallax = () => {
                 elementCoordX = `calc(-50% + ${elementCoordX}px)`;
                 elementCoordY = `calc(-50% + ${elementCoordY}px)`;
 
-                element.style.transform = `perspective(2300px) rotateY(${elementDegree}deg) translate3d(${elementCoordX}, ${elementCoordY}, ${zValue}px)`;
-                element.style.webkitTransform = `perspective(2300px) rotateY(${elementDegree}deg) translate3d(${elementCoordX}, ${elementCoordY}, ${zValue}px)`;
+                element.style.transform = `
+                    perspective(2300px)
+                    rotateY(${elementDegree}deg) 
+                    translate3d(${elementCoordX}, ${elementCoordY}, ${zValue}px)`;
             } else {
-                element.style.transform = `perspective(2300px) rotateY(${elementDegree}deg) translate3d(calc(-50% + ${elementCoordX}px), ${elementCoordY}px, ${zValue}px)`;
-                element.style.webkitTransform = `perspective(2300px) rotateY(${elementDegree}deg) translate3d(calc(-50% + ${elementCoordX}px), ${elementCoordY}px, ${zValue}px)`;
+                element.style.transform = `
+                    perspective(2300px)
+                    rotateY(${elementDegree}deg)
+                    translate3d(calc(-50% + ${elementCoordX}px), ${elementCoordY}px, ${zValue}px)`;
             }
 
         })
