@@ -17,10 +17,6 @@ const initParallax = () => {
         hoverOnly: true
     });
 
-    if (window.matchMedia('(max-width: 576px)').matches) {
-        parallaxInstance.scalar(14, 14)
-    }
-
     function initRotationElements(e) {
         let coordX = e.clientX - window.innerWidth / 2;
         let rotateDegree = (coordX / window.innerWidth / 2) * 20;
