@@ -228,7 +228,7 @@ svg {
   position: absolute;
   z-index: 2;
   width: 100%;
-  top: 55%;
+  top: 54%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -249,6 +249,10 @@ svg {
   height: 100%;
   -webkit-transform-style: unset !important;
           transform-style: unset !important;
+}
+
+.scene__layer--left-fog {
+  z-index: 3;
 }
 
 .scene__layer div {
@@ -286,6 +290,7 @@ svg {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 30.065%;
+  aspect-ratio: 539/824;
 }
 
 .scene__right-buildings img {
@@ -294,12 +299,13 @@ svg {
 
 .scene__evolution {
   position: absolute;
-  bottom: -10.6%;
-  left: 88.2%;
+  bottom: -11.2%;
+  left: 87.9%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 10%;
+  aspect-ratio: 18/55;
 }
 
 .scene__evolution img {
@@ -314,13 +320,14 @@ svg {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 7.6%;
+  aspect-ratio: 121/314;
 }
 
 .scene__2000 img {
   width: 100%;
 }
 
-.scene__fog-on-right {
+.scene__fog-under-right {
   position: absolute;
   bottom: -10%;
   left: 95%;
@@ -356,6 +363,7 @@ svg {
       -ms-transform: translate(-50%);
           transform: translate(-50%);
   width: 10.42%;
+  aspect-ratio: 43/205;
 }
 
 .scene__oko img {
@@ -370,6 +378,7 @@ svg {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 35.561%;
+  aspect-ratio: 581/536;
 }
 
 .scene__iq-big img {
@@ -384,6 +393,7 @@ svg {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 15.334%;
+  aspect-ratio: 16/47;
 }
 
 .scene__eurasia img {
@@ -398,6 +408,7 @@ svg {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 18.7%;
+  aspect-ratio: 286/293;
 }
 
 .scene__iq-small img {
@@ -421,10 +432,12 @@ svg {
       -ms-transform: translateX(-49%);
           transform: translateX(-49%);
   width: 30.45%;
+  aspect-ratio: 273/475;
 }
 
 .scene__center-back-building img {
   width: 100%;
+  height: 100%;
 }
 
 .scene__center-front-building {
@@ -436,24 +449,26 @@ svg {
           transform: translateX(-50%);
   z-index: 2;
   width: 24.7%;
+  aspect-ratio: 436/517;
 }
 
 .scene__center-front-building img {
   width: 100%;
 }
 
-.scene__fog-on-right-second {
+.scene__fog-on-left {
   position: absolute;
   bottom: -10%;
-  left: 77%;
-  width: 66%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 50%;
+  width: 50%;
+  -webkit-transform: translateX(-113%);
+      -ms-transform: translateX(-113%);
+          transform: translateX(-113%);
   z-index: 3;
+  max-height: 70%;
 }
 
-.scene__fog-on-right-second img {
+.scene__fog-on-left img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -481,7 +496,7 @@ svg {
     left: 65%;
   }
 
-  .scene__fog-on-right {
+  .scene__fog-under-right {
     left: 90%;
   }
 
@@ -539,38 +554,109 @@ svg {
     max-width: 960px;
   }
 
+  .hero-parallax__title {
+    top: 53.5%;
+  }
+
   .scene__right-buildings {
-    width: 33.065%;
+    width: unset;
+    height: 85%;
+    left: 50%;
+    -webkit-transform: translateX(43%);
+        -ms-transform: translateX(43%);
+            transform: translateX(43%);
+  }
+
+  .scene__evolution {
+    right: 50%;
+    left: auto;
+    -webkit-transform: translateX(472.6%);
+        -ms-transform: translateX(472.6%);
+            transform: translateX(472.6%);
+    width: unset;
+    height: 49%;
+    bottom: -8.8%;
+  }
+
+  .scene__2000 {
+    width: unset;
+    height: 34.11%;
+    left: 50%;
+    -webkit-transform: translateX(170%);
+        -ms-transform: translateX(170%);
+            transform: translateX(170%);
+  }
+
+  .scene__fog-under-left {
+    bottom: -20%;
+    max-height: 60%;
+  }
+
+  .scene__fog-between-left-center {
+    left: 30%;
   }
 
   .scene__oko {
-    width: 10.42%;
-    left: 7.4%;
-    bottom: -13%;
+    height: 80%;
+    left: auto;
+    right: 50%;
+    -webkit-transform: translateX(-381.7%);
+        -ms-transform: translateX(-381.7%);
+            transform: translateX(-381.7%);
+    width: unset;
+    bottom: -2%;
   }
 
   .scene__iq-big {
-    width: 35.261%;
-    left: 17.1%;
+    height: 54.75%;
+    width: unset;
+    bottom: -4.8%;
+    left: auto;
+    right: 50%;
+    -webkit-transform: translateX(-42%);
+        -ms-transform: translateX(-42%);
+            transform: translateX(-42%);
   }
 
   .scene__eurasia {
-    width: 15.334%;
-    left: 22.9%;
-    bottom: -14%;
+    width: unset;
+    left: auto;
+    right: 50%;
+    height: 82.7%;
+    -webkit-transform: translateX(-108%);
+        -ms-transform: translateX(-108%);
+            transform: translateX(-108%);
   }
 
   .scene__iq-small {
-    width: 18.7%;
-    left: 14.6%;
+    width: unset;
+    height: 32.3%;
+    left: auto;
+    bottom: -4%;
+    right: 50%;
+    -webkit-transform: translateX(-136.9%);
+        -ms-transform: translateX(-136.9%);
+            transform: translateX(-136.9%);
   }
 
   .scene__center-back-building {
-    width: 33.45%;
+    height: 91%;
+    width: unset;
+    bottom: -5%;
   }
 
   .scene__center-front-building {
-    width: 27.7%;
+    bottom: -4.9%;
+    width: unset;
+    height: 49.5%;
+  }
+
+  .scene__fog-on-left {
+    max-height: 60%;
+    width: 56%;
+    -webkit-transform: translateX(-104%);
+        -ms-transform: translateX(-104%);
+            transform: translateX(-104%);
   }
 }
 
@@ -578,11 +664,30 @@ svg {
   .container {
     max-width: 720px;
   }
+
+  .hero-parallax__title {
+    top: 51.5%;
+    font-size: 72px;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
+  }
+
+  .hero-parallax__title {
+    font-size: 64px;
+    top: 52.5%;
+  }
+
+  .scene__fog-on-left {
+    max-height: unset;
+    width: 96%;
+    -webkit-transform: translateX(-69%);
+        -ms-transform: translateX(-69%);
+            transform: translateX(-69%);
+    bottom: -30%;
   }
 }
 
@@ -590,6 +695,67 @@ svg {
   .container {
     max-width: none;
     padding: 0 16px;
+  }
+
+  .hero-parallax__title {
+    font-size: 56px;
+    top: 56%;
+  }
+
+  .scene__right-buildings {
+    height: 64%;
+    -webkit-transform: translateX(37%);
+        -ms-transform: translateX(37%);
+            transform: translateX(37%);
+  }
+
+  .scene__2000 {
+    height: 25%;
+    -webkit-transform: translateX(180%);
+        -ms-transform: translateX(180%);
+            transform: translateX(180%);
+  }
+
+  .scene__iq-big {
+    height: 44.75%;
+    -webkit-transform: translateX(-21%);
+        -ms-transform: translateX(-21%);
+            transform: translateX(-21%);
+  }
+
+  .scene__eurasia {
+    height: 68.7%;
+    -webkit-transform: translateX(-61%);
+        -ms-transform: translateX(-61%);
+            transform: translateX(-61%);
+  }
+
+  .scene__iq-small {
+    height: 24.3%;
+    -webkit-transform: translateX(-104.9%);
+        -ms-transform: translateX(-104.9%);
+            transform: translateX(-104.9%);
+  }
+
+  .scene__center-back-building {
+    height: 80%;
+  }
+
+  .scene__center-front-building {
+    height: 43.5%;
+    left: 53.3%;
+  }
+
+  .scene__fog-on-left {
+    bottom: -10%;
+    max-height: 40%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-parallax__title {
+    top: 54.5%;
+    font-size: 48px;
   }
 }
 

@@ -7,7 +7,9 @@ const initParallax = () => {
 
     const rotationElements = parallaxScene.querySelectorAll('[data-rotation]');
 
-    window.addEventListener('mousemove', initRotationElements)
+    if (!window.matchMedia('(max-width: 1200px)').matches) {
+        window.addEventListener('mousemove', initRotationElements)
+    }
 
     const parallaxInstance = new Parallax(parallaxScene, {
         scalarX: 12,
