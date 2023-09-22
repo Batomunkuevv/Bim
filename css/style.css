@@ -251,7 +251,7 @@ svg {
   height: 100%;
   -webkit-transform-style: unset !important;
           transform-style: unset !important;
-  pointer-events: none !important;
+  pointer-events: auto !important;
 }
 
 .scene__layer--left-fog {
