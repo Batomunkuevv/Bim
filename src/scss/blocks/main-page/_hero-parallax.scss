@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     &__title {
         font-size: 164px;
@@ -45,7 +46,7 @@
             top: 56%;
         }
 
-        @media(max-width: 400px){
+        @media (max-width: 400px) {
             top: 54.5%;
             font-size: 48px;
         }
@@ -72,7 +73,6 @@
         }
 
         & div {
-            pointer-events: auto !important;
             transition: all 0.5 cubic-bezier(0.2, 0.49, 0.32, 0.99) 0s;
         }
     }
@@ -84,6 +84,11 @@
         width: 120%;
         height: 120%;
         transform: translate(-50%, -50%);
+
+        @media (max-width: 576px) {
+            width: 130%;
+            height: 130%;
+        }
 
         & img {
             width: 100%;
@@ -178,6 +183,7 @@
         @media (max-width: 576px) {
             height: 25%;
             transform: translateX(180%);
+            bottom: -9%;
         }
 
         & img {
@@ -422,8 +428,8 @@
         position: absolute;
         bottom: -10%;
         left: 50%;
-        width: 50%;
-        transform: translateX(-113%);
+        width: 60%;
+        transform: translateX(-94%);
         z-index: 3;
         max-height: 70%;
 

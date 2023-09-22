@@ -5,10 +5,15 @@ const initParallax = () => {
 
     if (!parallaxScene) return;
 
+    const parallaxSceneBg = parallaxScene.querySelector('.scene__layer--bg');
     const rotationElements = parallaxScene.querySelectorAll('[data-rotation]');
 
     if (!window.matchMedia('(max-width: 1200px)').matches) {
         window.addEventListener('mousemove', initRotationElements)
+    }
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        parallaxSceneBg.setAttribute('data-depth', '0.1');
     }
 
     const parallaxInstance = new Parallax(parallaxScene, {
