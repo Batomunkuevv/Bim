@@ -17,8 +17,8 @@ const initParallax = () => {
         hoverOnly: true
     });
 
-    if (!window.matchMedia('(max-width: 576px)').matches) {
-        parallaxInstance.scalar(16, 16)
+    if (window.matchMedia('(max-width: 576px)').matches) {
+        parallaxInstance.scalar(14, 14)
     }
 
     function initRotationElements(e) {
