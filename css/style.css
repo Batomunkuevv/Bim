@@ -719,6 +719,7 @@ svg {
     -webkit-transform: translateX(180%);
         -ms-transform: translateX(180%);
             transform: translateX(180%);
+    bottom: -9%;
   }
 
   .scene__iq-big {
