@@ -2,7 +2,12 @@
     <ul class="hero-parallax__scene scene">
         <li data-depth="0.8" class="scene__layer">
             <div class="scene__bg">
-                <img src="@img/blocks/hero-parallax/bg.png" alt="Background" title="Background">
+                <img src="@img/blocks/hero-parallax/bg.jpg" alt="Background" title="Background">
+            </div>
+        </li>
+        <li data-depth="0.5" class="scene__layer">
+            <div class="scene__fog-under-right">
+                <img src="@img/blocks/hero-parallax/fog-on-right.png" alt="Fog on left" title="Fog on left">
             </div>
         </li>
         <li data-depth="0.5" data-scalar-x="100" class="scene__layer">
@@ -18,11 +23,6 @@
         <li data-depth="0.35" class="scene__layer">
             <div data-rotation="2" class="scene__2000">
                 <img src="@img/blocks/hero-parallax/building-2000.png" alt="Tower 2000" title="Tower 2000">
-            </div>
-        </li>
-        <li data-depth="0.5" class="scene__layer">
-            <div class="scene__fog-on-right">
-                <img src="@img/blocks/hero-parallax/fog-on-right.png" alt="Fog on left" title="Fog on left">
             </div>
         </li>
         <li data-depth="0.5" class="scene__layer">
@@ -56,11 +56,11 @@
                 <img src="@img/blocks/hero-parallax/iq-small.png" alt="IQ Tower" title="IQ Tower">
             </div>
         </li>
-        <li data-depth="0.5" class="scene__layer">
+        <!-- <li data-depth="0.5" class="scene__layer">
             <div class="scene__fog-on-left">
                 <img src="@img/blocks/hero-parallax/fog-on-left.png" alt="Fog on left" title="Fog on left">
             </div>
-        </li>
+        </li> -->
         <li data-depth="0.3" class="scene__layer">
             <div class="scene__center-back-building">
                 <img src="@img/blocks/hero-parallax/center-back-building.png" alt="Center back building"
@@ -78,10 +78,9 @@
                     title="Center front building">
             </div>
         </li>
-        <li data-depth="0.5" class="scene__layer">
-            <div class="scene__fog-on-right-second">
-                <img src="@img/blocks/hero-parallax/fog-on-right-second.png" alt="Fog on right second"
-                    title="Fog on right second">
+        <li data-depth="0.5" class="scene__layer scene__layer--left-fog">
+            <div class="scene__fog-on-left">
+                <img src="@img/blocks/hero-parallax/fog-on-left.png" alt="Fog on left" title="Fog on left">
             </div>
         </li>
     </ul>

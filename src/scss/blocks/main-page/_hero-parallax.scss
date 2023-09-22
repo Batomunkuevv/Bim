@@ -13,7 +13,7 @@
         position: absolute;
         z-index: 2;
         width: 100%;
-        top: 55%;
+        top: 54%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -24,6 +24,30 @@
 
         @media (max-width: 1440px) {
             font-size: 96px;
+        }
+
+        @media (max-width: 1200px) {
+            top: 53.5%;
+        }
+
+        @media (max-width: 992px) {
+            top: 51.5%;
+            font-size: 72px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 64px;
+            top: 52.5%;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 56px;
+            top: 56%;
+        }
+
+        @media(max-width: 400px){
+            top: 54.5%;
+            font-size: 48px;
         }
     }
 
@@ -42,6 +66,10 @@
         width: 100%;
         height: 100%;
         transform-style: unset !important;
+
+        &--left-fog {
+            z-index: 3;
+        }
 
         & div {
             pointer-events: auto !important;
@@ -71,6 +99,7 @@
         left: 78.8%;
         transform: translateX(-50%);
         width: 30.065%;
+        aspect-ratio: 539/824;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 27.065%;
@@ -78,7 +107,15 @@
         }
 
         @media (max-width: 1200px) {
-            width: 33.065%;
+            width: unset;
+            height: 85%;
+            left: 50%;
+            transform: translateX(43%);
+        }
+
+        @media (max-width: 576px) {
+            height: 64%;
+            transform: translateX(37%);
         }
 
         & img {
@@ -88,10 +125,11 @@
 
     &__evolution {
         position: absolute;
-        bottom: -10.6%;
-        left: 88.2%;
+        bottom: -11.2%;
+        left: 87.9%;
         transform: translateX(-50%);
         width: 10%;
+        aspect-ratio: 18/55;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 9%;
@@ -99,8 +137,17 @@
             left: 83.9%;
         }
 
-        @media(max-height: 750px) and (mфч-width: 1300px){
+        @media (max-height: 750px) and (mфч-width: 1300px) {
             left: 88%;
+        }
+
+        @media (max-width: 1200px) {
+            right: 50%;
+            left: auto;
+            transform: translateX(472.6%);
+            width: unset;
+            height: 49%;
+            bottom: -8.8%;
         }
 
         & img {
@@ -114,10 +161,23 @@
         left: 66.6%;
         transform: translateX(-50%);
         width: 7.6%;
+        aspect-ratio: 121/314;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 6.5%;
             left: 65%;
+        }
+
+        @media (max-width: 1200px) {
+            width: unset;
+            height: 34.11%;
+            left: 50%;
+            transform: translateX(170%);
+        }
+
+        @media (max-width: 576px) {
+            height: 25%;
+            transform: translateX(180%);
         }
 
         & img {
@@ -125,7 +185,7 @@
         }
     }
 
-    &__fog-on-right {
+    &__fog-under-right {
         position: absolute;
         bottom: -10%;
         left: 95%;
@@ -142,6 +202,11 @@
         bottom: -10%;
         left: 5%;
         transform: translateX(-50%);
+
+        @media (max-width: 1200px) {
+            bottom: -20%;
+            max-height: 60%;
+        }
     }
 
     &__fog-between-left-center {
@@ -149,6 +214,10 @@
         bottom: -10%;
         left: 43.5%;
         transform: translateX(-50%);
+
+        @media (max-width: 1200px) {
+            left: 30%;
+        }
     }
 
     &__oko {
@@ -157,6 +226,7 @@
         left: 9.1%;
         transform: translate(-50%);
         width: 10.42%;
+        aspect-ratio: 43/205;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 7.92%;
@@ -165,9 +235,12 @@
         }
 
         @media (max-width: 1200px) {
-            width: 10.42%;
-            left: 7.4%;
-            bottom: -13%;
+            height: 80%;
+            left: auto;
+            right: 50%;
+            transform: translateX(-381.7%);
+            width: unset;
+            bottom: -2%;
         }
 
         & img {
@@ -181,6 +254,7 @@
         left: 19.4%;
         transform: translateX(-50%);
         width: 35.561%;
+        aspect-ratio: 581/536;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 29.261%;
@@ -189,8 +263,17 @@
         }
 
         @media (max-width: 1200px) {
-            width: 35.261%;
-            left: 17.1%;
+            height: 54.75%;
+            width: unset;
+            bottom: -4.8%;
+            left: auto;
+            right: 50%;
+            transform: translateX(-42%);
+        }
+
+        @media (max-width: 576px) {
+            height: 44.75%;
+            transform: translateX(-21%);
         }
 
         & img {
@@ -204,6 +287,7 @@
         left: 25.5%;
         transform: translateX(-50%);
         width: 15.334%;
+        aspect-ratio: 16/47;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 11.634%;
@@ -212,9 +296,16 @@
         }
 
         @media (max-width: 1200px) {
-            width: 15.334%;
-            left: 22.9%;
-            bottom: -14%;
+            width: unset;
+            left: auto;
+            right: 50%;
+            height: 82.7%;
+            transform: translateX(-108%);
+        }
+
+        @media (max-width: 576px) {
+            height: 68.7%;
+            transform: translateX(-61%);
         }
 
         & img {
@@ -228,6 +319,7 @@
         left: 16.8%;
         transform: translateX(-50%);
         width: 18.7%;
+        aspect-ratio: 286/293;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 15.75%;
@@ -235,8 +327,17 @@
         }
 
         @media (max-width: 1200px) {
-            width: 18.7%;
-            left: 14.6%;
+            width: unset;
+            height: 32.3%;
+            left: auto;
+            bottom: -4%;
+            right: 50%;
+            transform: translateX(-136.9%);
+        }
+
+        @media (max-width: 576px) {
+            height: 24.3%;
+            transform: translateX(-104.9%);
         }
 
         & img {
@@ -257,6 +358,7 @@
         left: 50.3%;
         transform: translateX(-49%);
         width: 30.45%;
+        aspect-ratio: 273/475;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 27.45%;
@@ -267,11 +369,18 @@
         }
 
         @media (max-width: 1200px) {
-            width: 33.45%;
+            height: 91%;
+            width: unset;
+            bottom: -5%;
+        }
+
+        @media (max-width: 576px) {
+            height: 80%;
         }
 
         & img {
             width: 100%;
+            height: 100%;
         }
     }
 
@@ -282,6 +391,7 @@
         transform: translateX(-50%);
         z-index: 2;
         width: 24.7%;
+        aspect-ratio: 436/517;
 
         @media (max-height: 750px) and (min-width: 1300px) {
             width: 21.71%;
@@ -293,7 +403,14 @@
         }
 
         @media (max-width: 1200px) {
-            width: 27.7%;
+            bottom: -4.9%;
+            width: unset;
+            height: 49.5%;
+        }
+
+        @media (max-width: 576px) {
+            height: 43.5%;
+            left: 53.3%;
         }
 
         & img {
@@ -301,13 +418,32 @@
         }
     }
 
-    &__fog-on-right-second {
+    &__fog-on-left {
         position: absolute;
         bottom: -10%;
-        left: 77%;
-        width: 66%;
-        transform: translateX(-50%);
+        left: 50%;
+        width: 50%;
+        transform: translateX(-113%);
         z-index: 3;
+        max-height: 70%;
+
+        @media (max-width: 1200px) {
+            max-height: 60%;
+            width: 56%;
+            transform: translateX(-104%);
+        }
+
+        @media (max-width: 768px) {
+            max-height: unset;
+            width: 96%;
+            transform: translateX(-69%);
+            bottom: -30%;
+        }
+
+        @media (max-width: 576px) {
+            bottom: -10%;
+            max-height: 40%;
+        }
 
         & img {
             width: 100%;
