@@ -14,7 +14,12 @@ const initParallax = () => {
     const parallaxInstance = new Parallax(parallaxScene, {
         scalarX: 12,
         scalarY: 12,
+        hoverOnly: true
     });
+
+    if (!window.matchMedia('(max-width: 576px)').matches) {
+        parallaxInstance.scalar(14, 14)
+    }
 
     function initRotationElements(e) {
         let coordX = e.clientX - window.innerWidth / 2;

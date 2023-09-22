@@ -256,7 +256,6 @@ svg {
 }
 
 .scene__layer div {
-  pointer-events: auto !important;
   -webkit-transition: all 0.5 cubic-bezier(0.2, 0.49, 0.32, 0.99) 0s;
   -o-transition: all 0.5 cubic-bezier(0.2, 0.49, 0.32, 0.99) 0s;
   transition: all 0.5 cubic-bezier(0.2, 0.49, 0.32, 0.99) 0s;
