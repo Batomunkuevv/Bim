@@ -243,7 +243,6 @@ svg {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: auto !important;
 }
 
 .scene__layer {
@@ -251,7 +250,6 @@ svg {
   height: 100%;
   -webkit-transform-style: unset !important;
           transform-style: unset !important;
-  pointer-events: auto !important;
 }
 
 .scene__layer--left-fog {
@@ -462,10 +460,10 @@ svg {
   position: absolute;
   bottom: -10%;
   left: 50%;
-  width: 50%;
-  -webkit-transform: translateX(-113%);
-      -ms-transform: translateX(-113%);
-          transform: translateX(-113%);
+  width: 60%;
+  -webkit-transform: translateX(-94%);
+      -ms-transform: translateX(-94%);
+          transform: translateX(-94%);
   z-index: 3;
   max-height: 70%;
 }
