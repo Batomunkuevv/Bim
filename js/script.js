@@ -12,7 +12,7 @@ const initParallax = () => {
         window.addEventListener('mousemove', initRotationElements)
     }
 
-    if (!window.matchMedia('(max-width: 768px)').matches) {
+    if (window.matchMedia('(max-width: 768px)').matches) {
         parallaxSceneBg.setAttribute('data-depth', '0.6');
     }
 
