@@ -701,6 +701,11 @@ svg {
     top: 56%;
   }
 
+  .scene__bg {
+    width: 130%;
+    height: 130%;
+  }
+
   .scene__right-buildings {
     height: 64%;
     -webkit-transform: translateX(37%);

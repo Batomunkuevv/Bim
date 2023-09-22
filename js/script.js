@@ -18,7 +18,7 @@ const initParallax = () => {
     });
 
     if (!window.matchMedia('(max-width: 576px)').matches) {
-        parallaxInstance.scalar(14, 14)
+        parallaxInstance.scalar(16, 16)
     }
 
     function initRotationElements(e) {
