@@ -11,7 +11,11 @@ const initParallax = () => {
     if (!window.matchMedia('(max-width: 1200px)').matches) {
         window.addEventListener('mousemove', initRotationElements)
     }
-    
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        parallaxSceneBg.setAttribute('data-depth', '0.1');
+    }
+
     const parallaxInstance = new Parallax(parallaxScene, {
         scalarX: 12,
         scalarY: 12,
