@@ -37,9 +37,9 @@
         }
         
         @media(max-width: 576px){
-            top: 52.5%;
-            font-size: calc($index * 5.185);
-            line-height: 115%;
+            top: 52.9%;
+            font-size: calc((1vh + 1vw) * 5.185);
+            line-height: 110%;
         }
     }
 
