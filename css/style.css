@@ -789,9 +789,9 @@ svg {
   }
 
   .hero-parallax__title {
-    top: 52.5%;
+    top: 52.9%;
     font-size: calc((1vh + 1vw) * 5.185);
-    line-height: 115%;
+    line-height: 110%;
   }
 
   .scene__layer--center-front-building {
