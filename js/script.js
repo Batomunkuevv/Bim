@@ -51,14 +51,21 @@ const initParallax = () => {
     }
 
     function initMobileParallax() {
-        parallaxScene.addEventListener('mousemove', e => {
+        parallaxScene.addEventListener('mousemove', moveParallax)
+
+        parallaxScene.addEventListener('touchmove', moveParallax)
+
+        function moveParallax(e) {
+            const clientX = e.type === 'touchmove' ? e.changedTouches[0].clientX : e.clientX;
+            const clientY = e.type === 'touchmove' ? e.changedTouches[0].clientY : e.clientY;
+
             Object.assign(document.documentElement, {
                 style: `
-            --move-x: ${(e.clientX - window.innerWidth / 2) * -.005}deg;
-            --move-y: ${(e.clientY - window.innerHeight / 2) * .01}deg;
+            --move-x: ${(clientX - window.innerWidth / 2) * -.005}deg;
+            --move-y: ${(clientY - window.innerHeight / 2) * .01}deg;
             `
             })
-        })
+        }
     }
 
 
