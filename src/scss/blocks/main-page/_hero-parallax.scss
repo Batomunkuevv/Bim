@@ -35,9 +35,11 @@
             top: 49.5%;
             font-size: calc($index * 5.1);
         }
-
+        
         @media(max-width: 576px){
             top: 52.5%;
+            font-size: calc($index * 5.185);
+            line-height: 115%;
         }
     }
 
