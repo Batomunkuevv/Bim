@@ -7,6 +7,10 @@
     justify-content: center;
     overflow: hidden;
 
+    @media (max-width: 1200px) {
+        perspective: 1000px;
+    }
+
     &__title {
         font-size: 164px;
         line-height: 120%;
@@ -14,13 +18,13 @@
         position: absolute;
         z-index: 2;
         width: 100%;
-        top: 54%;
+        top: 53%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
 
         @media (max-height: 750px) and (min-width: 1300px) {
-            top: 50%;
+            top: 48.5%;
         }
 
         @media (max-width: 1440px) {
@@ -28,27 +32,12 @@
         }
 
         @media (max-width: 1200px) {
-            top: 53.5%;
+            top: 49.5%;
+            font-size: calc($index * 5.1);
         }
 
-        @media (max-width: 992px) {
-            top: 51.5%;
-            font-size: 72px;
-        }
-
-        @media (max-width: 768px) {
-            font-size: 64px;
+        @media(max-width: 576px){
             top: 52.5%;
-        }
-
-        @media (max-width: 576px) {
-            font-size: 56px;
-            top: 56%;
-        }
-
-        @media (max-width: 400px) {
-            top: 54.5%;
-            font-size: 48px;
         }
     }
 
@@ -63,31 +52,126 @@
     width: 100%;
     height: 100%;
 
+    @media (max-width: 1200px) {
+        transform-style: preserve-3d;
+        transform: rotateX(var(--move-x)) rotateY(var(--move-y));
+        will-change: transform;
+        transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+    }
+
     &__layer {
         width: 100%;
         height: 100%;
-        transform-style: unset !important;
+
+        &--bg {
+            transform: translateZ(-100px) scale(1.22);
+        }
 
         &--left-fog {
             z-index: 3;
+
+            @media (max-width: 1200px) {
+                transform: translateZ(380px) scale(0.8);
+            }
+        }
+
+        &--title {
+            @media (max-width: 1200px) {
+                transform: translateZ(300px) scale(0.7);
+            }
+        }
+
+        &--evolution {
+            @media (max-width: 1200px) {
+                transform: translateZ(120px) scale(0.8825);
+            }
+        }
+
+        &--right-buildings {
+            @media (max-width: 1200px) {
+                transform: translateZ(150px) scale(0.811);
+            }
+        }
+
+        &--2000 {
+            @media (max-width: 1200px) {
+                transform: translateZ(210px) scale(0.79);
+            }
+        }
+
+        &--center-back-building {
+            @media (max-width: 1200px) {
+                transform: translateZ(270px) scale(0.71);
+            }
+        }
+
+        &--center-front-building {
+            @media (max-width: 1200px) {
+                transform: translateZ(330px) scale(0.7);
+            }
+            
+            @media(max-width: 576px){
+                transform: translateZ(330px) scale(0.6);
+            }
+        }
+
+        &--eurasia {
+            @media (max-width: 1200px) {
+                transform: translateZ(120px) scale(0.879);
+            }
+        
+        }
+        &--oko {
+            @media (max-width: 1200px) {
+                transform: translateZ(130px) scale(0.869);
+            }
+        }
+
+        &--iq-big {
+            @media (max-width: 1200px) {
+                transform: translateZ(150px) scale(0.85);
+            }
+        }
+
+        &--iq-small {
+            @media (max-width: 1200px) {
+                transform: translateZ(190px) scale(0.772);
+            }
+        }
+
+        &--fog-right {
+            @media (max-width: 1200px) {
+                z-index: 4;
+                transform: translateZ(380px) scale(0.8);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            transform-style: unset !important;
+        }
+
+        @media (max-width: 1200px) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            perspective: 1000px;
         }
 
         & div {
-            transition: all 0.5 cubic-bezier(0.2, 0.49, 0.32, 0.99) 0s;
+            @media (min-width: 1200px) {
+                transition: all 0.5 cubic-bezier(0.2, 0.49, 0.32, 0.99) 0s;
+            }
         }
     }
 
     &__bg {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 120%;
-        height: 120%;
-        transform: translate(-50%, -50%);
+        inset: -20%;
 
-        @media (max-width: 576px) {
-            width: 130%;
-            height: 130%;
+        @media (max-width: 1200px) {
+            inset: -5%;
         }
 
         & img {
@@ -112,6 +196,7 @@
         }
 
         @media (max-width: 1200px) {
+            bottom: -10.5%;
             width: unset;
             height: 85%;
             left: 50%;
@@ -149,7 +234,7 @@
         @media (max-width: 1200px) {
             right: 50%;
             left: auto;
-            transform: translateX(472.6%);
+            transform: translateX(466.6%);
             width: unset;
             height: 49%;
             bottom: -8.8%;
@@ -200,6 +285,11 @@
 
         @media (max-height: 750px) and (min-width: 1300px) {
             left: 90%;
+        }
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            bottom: 0;
         }
     }
 
@@ -336,9 +426,9 @@
             width: unset;
             height: 32.3%;
             left: auto;
-            bottom: -4%;
+            bottom: -5.1%;
             right: 50%;
-            transform: translateX(-136.9%);
+            transform: translateX(-145.9%);
         }
 
         @media (max-width: 576px) {
@@ -356,6 +446,10 @@
         bottom: -10%;
         left: 93.4%;
         transform: translateX(-50%);
+
+        @media (max-width: 1200px) {
+            transform: translateZ(300px) translateX(-50%);
+        }
     }
 
     &__center-back-building {
@@ -377,7 +471,7 @@
         @media (max-width: 1200px) {
             height: 91%;
             width: unset;
-            bottom: -5%;
+            bottom: -3.4%;
         }
 
         @media (max-width: 576px) {
@@ -409,14 +503,13 @@
         }
 
         @media (max-width: 1200px) {
-            bottom: -4.9%;
+            bottom: -2.3%;
             width: unset;
             height: 49.5%;
         }
 
-        @media (max-width: 576px) {
-            height: 43.5%;
-            left: 53.3%;
+        @media(max-width: 576px){
+            bottom: -10%;
         }
 
         & img {
@@ -434,21 +527,16 @@
         max-height: 70%;
 
         @media (max-width: 1200px) {
-            max-height: 60%;
-            width: 56%;
-            transform: translateX(-104%);
-        }
-
-        @media (max-width: 768px) {
             max-height: unset;
-            width: 96%;
-            transform: translateX(-69%);
-            bottom: -30%;
+            left: 0;
+            bottom: 0;
+            width: 80%;
+            aspect-ratio: 1265/1060;
+            transform: unset;
         }
 
-        @media (max-width: 576px) {
-            bottom: -10%;
-            max-height: 40%;
+        @media(max-width: 576px){
+            width: 120%;
         }
 
         & img {
