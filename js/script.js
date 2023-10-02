@@ -102,7 +102,7 @@ const initContactsMap = () => {
             {},
             {
                 iconLayout: "default#image",
-                iconImageHref: "../images/icons/location.svg",
+                iconImageHref: "./images/icons/location.svg",
                 iconImageSize: [32, 32],
                 iconImageOffset: [-5, -38],
             }
