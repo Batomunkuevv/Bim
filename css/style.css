@@ -1238,6 +1238,10 @@ svg {
           perspective: 1000px;
 }
 
+.scene *:not(.scene__title):not(.scene__btn) {
+  pointer-events: none;
+}
+
 .scene__title {
   position: absolute;
   width: 100%;
