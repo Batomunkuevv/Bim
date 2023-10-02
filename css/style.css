@@ -1238,7 +1238,7 @@ svg {
           perspective: 1000px;
 }
 
-.scene *:not(.scene__title):not(.scene__btn) {
+.scene > *:not(.scene__title):not(.scene__btn) {
   pointer-events: none;
 }
 
