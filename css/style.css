@@ -2371,6 +2371,13 @@ svg {
   }
 }
 
+@media (max-width: 992px) and (min-height: 1000px) {
+  .scene__title {
+    -webkit-transform: translate3d(-50%, -65%, 300px) scale(0.7);
+            transform: translate3d(-50%, -65%, 300px) scale(0.7);
+  }
+}
+
 @media (max-width: 768px) {
   .section-title {
     margin-bottom: 40px;
@@ -2519,9 +2526,13 @@ svg {
     padding: 0 16px;
   }
 
+  .hero-parallax__title {
+    font-size: calc((1vh + 1vw) * 5);
+  }
+
   .scene__title {
-    -webkit-transform: translate3d(-50%, -49%, 300px) scale(0.7);
-            transform: translate3d(-50%, -49%, 300px) scale(0.7);
+    -webkit-transform: translate3d(-50%, -46%, 300px) scale(0.7);
+            transform: translate3d(-50%, -46%, 300px) scale(0.7);
   }
 
   .scene__right-buildings {
