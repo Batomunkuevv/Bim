@@ -1,19 +1,32 @@
 "use strict";
 
 const MEDIA_992_WIDTH = window.matchMedia("(max-width: 992px)");
+const MEDIA_768_WIDTH = window.matchMedia("(max-width: 768px)");
 
 const rerenderFooter = () => {
     const siteFooter = document.querySelector(".site-footer");
 
-    if (!siteFooter || !MEDIA_992_WIDTH.matches) return;
+    if (!siteFooter) return;
 
+    const siteFooterBody = siteFooter.querySelector(".site-footer__body");
     const siteFooterLeft = siteFooter.querySelector(".site-footer__left");
     const siteFooterRight = siteFooter.querySelector(".site-footer__right");
     const siteFooterDisclaimer = siteFooter.querySelector(".site-footer__disclaimer");
     const siteFooterCopyright = siteFooter.querySelector(".site-footer__copyright");
 
-    siteFooterRight.append(siteFooterCopyright);
-    siteFooterLeft.append(siteFooterDisclaimer);
+    if (MEDIA_992_WIDTH.matches && !MEDIA_768_WIDTH.matches) {
+        const siteFooterBottom = document.createElement("div");
+        siteFooterBottom.classList.add("site-footer__bottom");
+
+        siteFooterBottom.append(siteFooterCopyright);
+        siteFooterBody.append(siteFooterBottom);
+        siteFooterLeft.append(siteFooterDisclaimer);
+    }
+
+    if (MEDIA_768_WIDTH.matches) {
+        siteFooterRight.append(siteFooterCopyright);
+        siteFooterLeft.append(siteFooterDisclaimer);
+    }
 };
 
 const initParallax = () => {
@@ -109,7 +122,31 @@ const initContactsMap = () => {
     }
 };
 
+const initBurgerMenu = () => {
+    const menu = document.querySelector(".site-header__menu");
+    const burger = document.querySelector(".burger");
+
+    if (!menu || !burger) return;
+
+    const menuClose = document.querySelector(".site-header__menu-close");
+
+    if (menuClose) menuClose.addEventListener("click", handleMenuCloseClick);
+
+    burger.addEventListener("click", handleBurgerClick);
+
+    function handleMenuCloseClick() {
+        menu.classList.remove("is-open");
+        document.body.classList.remove("lock");
+    }
+
+    function handleBurgerClick() {
+        menu.classList.add("is-open");
+        document.body.classList.add("lock");
+    }
+};
+
 window.addEventListener("DOMContentLoaded", (e) => {
+    initBurgerMenu();
     initParallax();
     initLozad();
     initContactsMap();
