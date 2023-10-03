@@ -1236,8 +1236,10 @@ svg {
   height: 100%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transform: rotateX(var(--move-x)) rotateY(var(--move-y));
-          transform: rotateX(var(--move-x)) rotateY(var(--move-y));
+  -webkit-transform: rotateX(var(--move-x)) rotateY(var(--move-y)) translate3d(0, 0, 0);
+          transform: rotateX(var(--move-x)) rotateY(var(--move-y)) translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   will-change: transform;
   -webkit-transition: 2s cubic-bezier(0.05, 0.5, 0, 1);
   -o-transition: 2s cubic-bezier(0.05, 0.5, 0, 1);
