@@ -1049,6 +1049,7 @@ svg {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
 }
 
 .button::before {
@@ -1304,12 +1305,6 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
 .hero-parallax__title {
@@ -1343,6 +1338,11 @@ svg {
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+  -o-transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+  transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
   -webkit-transform: rotateX(var(--move-x)) rotateY(var(--move-y)) translate3d(0, 0, 0);
           transform: rotateX(var(--move-x)) rotateY(var(--move-y)) translate3d(0, 0, 0);
   -webkit-transform-style: preserve-3d;
@@ -1350,20 +1350,15 @@ svg {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   will-change: transform;
-  -webkit-transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
-  -o-transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
-  transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
 }
 
 .scene__layer {
   position: absolute;
   inset: -1.5vw;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -1701,6 +1696,10 @@ svg {
 
 .latest-news__list {
   margin-bottom: 56px;
+}
+
+.latest-news__item {
+  position: relative;
 }
 
 .latest-news__item:not(:last-child) {
