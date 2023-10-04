@@ -1196,12 +1196,6 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
 }
 
 .hero-parallax__title {
@@ -1252,6 +1246,12 @@ svg {
 .scene__layer {
   position: absolute;
   inset: -1.5vw;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .scene__layer:not(.scene__layer--btn) {

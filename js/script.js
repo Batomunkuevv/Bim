@@ -34,7 +34,7 @@ const initParallax = () => {
 
     if (!parallaxScene) return;
 
-    window.addEventListener("mousemove", moveParallax);
+    parallaxScene.addEventListener("mousemove", moveParallax);
     parallaxScene.addEventListener("touchmove", moveParallax);
 
     function moveParallax(e) {
