@@ -1196,11 +1196,12 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-}
-
-.hero-parallax__scene {
-  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .hero-parallax__title {
@@ -1234,10 +1235,10 @@ svg {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
   -webkit-transform: rotateX(var(--move-x)) rotateY(var(--move-y)) translate3d(0, 0, 0);
           transform: rotateX(var(--move-x)) rotateY(var(--move-y)) translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   will-change: transform;
@@ -1250,11 +1251,11 @@ svg {
 
 .scene__layer {
   position: absolute;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
   inset: -1.5vw;
+}
+
+.scene__layer:not(.scene__layer--btn) {
+  pointer-events: none;
 }
 
 .scene__layer--bg {
@@ -1577,7 +1578,7 @@ svg {
 
 .scene__btn {
   position: absolute;
-  top: 62%;
+  top: 65%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
