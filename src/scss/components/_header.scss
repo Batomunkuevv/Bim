@@ -1,0 +1,190 @@
+.site-header {
+    margin-top: 16px;
+    padding: 8px 0;
+
+    &--main {
+        margin: 0;
+        position: absolute;
+        top: 16px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+
+        & .menu__item {
+            &.is-active {
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+        & .menu__link {
+            color: #fff;
+
+            @media (max-width: 992px) {
+                color: $colorSecond;
+            }
+
+            &::after {
+                background: #fff;
+            }
+        }
+
+        & .menu__arrow {
+            color: #fff;
+        }
+
+        & .menu__subitem {
+            &:not(:last-child) {
+                border-color: #fff;
+            }
+        }
+
+        & .menu__sublink {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.3);
+
+            @media (max-width: 992px) {
+                color: $colorSecond;
+                background: unset;
+            }
+
+            &::before {
+                background: #fff;
+            }
+        }
+
+        & .languages__current {
+            color: #fff;
+        }
+
+        & .languages__item {
+            &:not(:last-child) {
+                border-color: #fff;
+            }
+        }
+
+        & .languages__link {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.3);
+
+            &::before {
+                background: #fff;
+            }
+        }
+
+        & .burger__line {
+            background: #fff;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+            row-gap: 24px;
+        }
+
+        @media (max-width: 992px) {
+            justify-content: start;
+            gap: 32px;
+        }
+
+        @media (max-width: 400px) {
+            gap: 16px;
+        }
+    }
+
+    &__logo {
+        margin-right: 16px;
+
+        @media (max-width: 1200px) {
+            max-width: 170px;
+        }
+
+        @media (max-width: 992px) {
+            margin-right: auto;
+        }
+
+        @media (max-width: 576px) {
+            max-width: 150px;
+        }
+    }
+
+    &__menu {
+        @media (max-width: 1200px) {
+            order: 3;
+        }
+
+        @media (max-width: 992px) {
+            padding: 56px 16px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            z-index: 101;
+            inset: 0;
+            max-height: 100%;
+            background: #fff;
+            overflow: auto;
+            transition: all 0.5s ease-in-out 0s;
+
+            &:not(.is-open) {
+                opacity: 0;
+                visibility: hidden;
+                transform: translate(-100%, 0);
+            }
+
+            &::-webkit-scrollbar {
+                width: 4px;
+                height: 4px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $colorMain;
+                border-radius: 20px;
+                border: 1px solid transparent;
+            }
+
+            scrollbar-width: 4px;
+            scrollbar-color: $colorMain #fff;
+        }
+
+        &-logo {
+            margin-top: auto;
+            margin-bottom: 40px;
+
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+
+        &-close {
+            width: 32px;
+            height: 32px;
+            background: unset;
+            position: absolute;
+            top: 32px;
+            right: 32px;
+            color: $colorMain;
+
+            @media (min-width: 992px) {
+                display: none;
+            }
+
+            @media (max-width: 400px) {
+                top: 16px;
+                right: 16px;
+            }
+        }
+    }
+
+    &__languages {
+    }
+}

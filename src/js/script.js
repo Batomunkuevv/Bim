@@ -1,76 +1,155 @@
 "use strict";
 
-const MEDIA_1200_WIDTH = window.matchMedia('(max-width: 1200px)');
+const MEDIA_992_WIDTH = window.matchMedia("(max-width: 992px)");
+const MEDIA_768_WIDTH = window.matchMedia("(max-width: 768px)");
+
+const rerenderFooter = () => {
+    const siteFooter = document.querySelector(".site-footer");
+
+    if (!siteFooter) return;
+
+    const siteFooterBody = siteFooter.querySelector(".site-footer__body");
+    const siteFooterLeft = siteFooter.querySelector(".site-footer__left");
+    const siteFooterRight = siteFooter.querySelector(".site-footer__right");
+    const siteFooterDisclaimer = siteFooter.querySelector(".site-footer__disclaimer");
+    const siteFooterCopyright = siteFooter.querySelector(".site-footer__copyright");
+
+    if (MEDIA_992_WIDTH.matches && !MEDIA_768_WIDTH.matches) {
+        const siteFooterBottom = document.createElement("div");
+        siteFooterBottom.classList.add("site-footer__bottom");
+
+        siteFooterBottom.append(siteFooterCopyright);
+        siteFooterBody.append(siteFooterBottom);
+        siteFooterLeft.append(siteFooterDisclaimer);
+    }
+
+    if (MEDIA_768_WIDTH.matches) {
+        siteFooterRight.append(siteFooterCopyright);
+        siteFooterLeft.append(siteFooterDisclaimer);
+    }
+};
 
 const initParallax = () => {
-    const parallaxScene = document.querySelector('.scene');
+    const parallaxScene = document.querySelector(".scene");
 
     if (!parallaxScene) return;
 
-    if (MEDIA_1200_WIDTH.matches) {
-        initMobileParallax();
-    } else {
-        initDesktopParallax();
+    parallaxScene.addEventListener("mousemove", moveParallax);
+    parallaxScene.addEventListener("touchmove", moveParallax);
+
+    function moveParallax(e) {
+        const clientX = e.type === "touchmove" ? e.changedTouches[0].clientX : e.clientX;
+        const clientY = e.type === "touchmove" ? e.changedTouches[0].clientY : e.clientY;
+        const rotateX = `${(clientX - window.innerWidth / 2) * -0.005}deg`;
+        const rotateY = `${(clientY - window.innerHeight / 2) * 0.01}deg`;
+
+        document.documentElement.style.setProperty("--move-x", rotateX);
+        document.documentElement.style.setProperty("--move-y", rotateY);
     }
+};
 
-    function initDesktopParallax() {
-        const rotationElements = parallaxScene.querySelectorAll('[data-rotation]');
+const initLozad = () => {
+    const lozadElements = document.querySelectorAll("[data-lozad]");
 
-        if (!MEDIA_1200_WIDTH.matches) {
-            parallaxScene.addEventListener('mousemove', initRotationElements)
+    if (!lozadElements) return;
+
+    lozadElements.forEach((element) => {
+        const lozadObserver = lozad(element);
+
+        lozadObserver.observe();
+    });
+};
+
+const initLatestNewHover = () => {
+    const latestNews = document.querySelectorAll(".latest-new");
+
+    if (!latestNews) return;
+
+    latestNews.forEach((latestNew) => {
+        const latestNewLine = latestNew.querySelector(".latest-new__line");
+        const latestNewMore = latestNew.querySelector(".latest-new__more");
+
+        latestNew.addEventListener("mouseover", shrinkLine);
+        latestNew.addEventListener("mouseleave", growLine);
+
+        function shrinkLine() {
+            latestNewLine.style.width = `${Math.round(latestNewMore.getBoundingClientRect().width)}px`;
         }
 
-        const parallaxInstance = new Parallax(parallaxScene, {
-            scalarX: 12,
-            scalarY: 12,
+        function growLine() {
+            latestNewLine.style.width = ``;
+        }
+    });
+};
+
+const initContactsMap = () => {
+    let contactsMap = document.querySelector(".have-questions__map");
+
+    if (!contactsMap || !ymaps) return;
+
+    ymaps.ready(init);
+
+    function init() {
+        const center = [55.770335, 37.590847];
+
+        contactsMap = new ymaps.Map(contactsMap, {
+            center: center,
+            zoom: 12,
         });
 
-        function initRotationElements(e) {
-            let coordX = e.clientX - window.innerWidth / 2;
-            let rotateDegree = (coordX / window.innerWidth / 2) * 20;
+        const placemark = new ymaps.Placemark(
+            center,
+            {},
+            {
+                iconLayout: "default#image",
+                iconImageHref: "./images/icons/location.svg",
+                iconImageSize: [32, 32],
+                iconImageOffset: [-5, -38],
+            }
+        );
 
-            rotationElements.forEach(element => {
-                const elementDegree = rotateDegree * element.dataset.rotation;
+        contactsMap.geoObjects.add(placemark);
 
-                if (element.classList.contains('hero-parallax__title')) {
-                    element.style.transform = `
-                        rotateY(${elementDegree}deg)
-                        translateX(-50%)
-                        translateY(-50%)
-                    `;
-                } else {
-                    element.style.transform = `
-                        rotateY(${elementDegree}deg)
-                        translateX(-50%)
-                    `;
-                }
+        contactsMap.controls
+            .remove("mapTools")
+            .remove("typeSelector")
+            .remove("searchControl")
+            .remove("trafficControl")
+            .remove("miniMap")
+            .remove("scaleLine")
+            .remove("routeEditor")
+            .remove("smallZoomControl");
+    }
+};
 
+const initBurgerMenu = () => {
+    const menu = document.querySelector(".site-header__menu");
+    const burger = document.querySelector(".burger");
 
-            })
-        }
+    if (!menu || !burger) return;
+
+    const menuClose = document.querySelector(".site-header__menu-close");
+
+    if (menuClose) menuClose.addEventListener("click", handleMenuCloseClick);
+
+    burger.addEventListener("click", handleBurgerClick);
+
+    function handleMenuCloseClick() {
+        menu.classList.remove("is-open");
+        document.body.classList.remove("lock");
     }
 
-    function initMobileParallax() {
-        parallaxScene.addEventListener('mousemove', moveParallax)
-
-        parallaxScene.addEventListener('touchmove', moveParallax)
-
-        function moveParallax(e) {
-            const clientX = e.type === 'touchmove' ? e.changedTouches[0].clientX : e.clientX;
-            const clientY = e.type === 'touchmove' ? e.changedTouches[0].clientY : e.clientY;
-
-            Object.assign(document.documentElement, {
-                style: `
-            --move-x: ${(clientX - window.innerWidth / 2) * -.005}deg;
-            --move-y: ${(clientY - window.innerHeight / 2) * .01}deg;
-            `
-            })
-        }
+    function handleBurgerClick() {
+        menu.classList.add("is-open");
+        document.body.classList.add("lock");
     }
-
-
-}
+};
 
 window.addEventListener("DOMContentLoaded", (e) => {
+    initBurgerMenu();
     initParallax();
+    initLozad();
+    initContactsMap();
+    initLatestNewHover();
+    rerenderFooter();
 });

@@ -2,8 +2,8 @@ html,
 body {
     font-family: $fontfamily;
     font-size: 16px;
-    line-height: 130%;
-    color: $color__font;
+    line-height: 150%;
+    color: $colorFont;
     font-weight: 400;
 
     &::-webkit-scrollbar {
@@ -16,20 +16,57 @@ body {
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: $color__main;
+        background-color: $colorMain;
         border-radius: 20px;
         border: 1px solid transparent;
     }
 
     scrollbar-width: 4px;
-    scrollbar-color: $color__main #fff;
+    scrollbar-color: $colorMain #fff;
 }
 
 body {
-
-    
     &.lock {
         overflow: hidden;
+    }
+}
+
+// Section
+
+section {
+    margin: 136px 0;
+
+    @media (max-width: 1200px) {
+        margin: 104px 0;
+    }
+
+    @media (max-width: 992px) {
+        margin: 80px 0;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section-title {
+    margin-bottom: 80px;
+    text-align: center;
+
+    @media (max-width: 1200px) {
+        margin-bottom: 64px;
+    }
+
+    @media (max-width: 992px) {
+        margin-bottom: 56px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 40px;
     }
 }
 
@@ -39,12 +76,77 @@ h1,
 h2,
 h3,
 h4 {
+    color: $colorMain;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 88px;
+    line-height: toProcent(88px, 107px);
+
+    @media (max-width: 1200px) {
+        font-size: 72px;
+        line-height: 125%;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 56px;
+        line-height: toProcent(56, 68);
+    }
+
+    @media (max-width: 400px) {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 72px;
+    line-height: toProcent(72, 88);
+
+    @media (max-width: 1200px) {
+        font-size: 56px;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 48px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+        line-height: 120%;
+    }
+
+    @media (max-width: 576px) {
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 32px;
+    }
+}
+
+h3 {
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: toProcent(32px, 38px);
+}
+
+// a
+
+a {
+    transition: all 0.5s ease-in-out 0s;
+
+    &:not([class]):hover {
+        color: $colorMain;
+    }
 }
 
 // P
 
 p {
     & + p {
+        margin-top: 24px;
     }
 }
 

@@ -1,0 +1,82 @@
+.contacts {
+    margin-bottom: 40px;
+    padding-top: 96px;
+
+    @media (max-width: 992px) {
+        padding-top: 56px;
+    }
+
+    @media(max-width: 768px){
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin-bottom: 80px;
+
+        @media (max-width: 1200px) {
+            margin-bottom: 64px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(424px, 1fr));
+        gap: 24px;
+
+        @media(max-width: 992px){
+            gap: 16px;
+        }
+
+        @media(max-width: 768px){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__block {
+        padding: 32px 24px 40px;
+        background: #fff;
+        box-shadow: 0px 2px 16px -1px rgba(54, 54, 54, 0.12);
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            padding: 24px 16px 32px;
+        }
+    }
+
+    &__list {
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 16px;
+        display: block;
+        color: rgba(15, 117, 185, 0.6);
+        font-size: 14px;
+        line-height: toProcent(14, 17);
+    }
+
+    &__item-text {
+        color: $colorSecond;
+        line-height: toProcent(16, 20);
+    }
+
+    &__item-link {
+        display: block;
+        width: fit-content;
+
+        &:hover {
+            color: $colorMain;
+        }
+    }
+}

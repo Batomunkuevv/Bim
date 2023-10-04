@@ -1,0 +1,19 @@
+.hot-news {
+    &__title {
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(424px, 1fr));
+        gap: 24px;
+
+        @media (max-width: 992px) {
+            gap: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+    }
+}

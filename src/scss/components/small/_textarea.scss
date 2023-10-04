@@ -1,0 +1,21 @@
+.textarea{
+    padding-bottom: 8px;
+    min-height: 100px;
+    font-size: 16px;
+    line-height: toProcent(16, 20);
+    color: $colorSecond;
+    border-bottom: 1px solid rgba(15, 117, 185, 0.60);
+    display: block;
+    width: 100%;
+    resize: none;
+
+    &::-webkit-input-placeholder{
+        color: rgba(54, 54, 54, 0.50);
+        opacity: 1;
+    }
+
+    &::-moz-placeholder{
+        color: rgba(54, 54, 54, 0.50);
+        opacity: 1;
+    }
+}

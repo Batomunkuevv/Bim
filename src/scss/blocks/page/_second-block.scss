@@ -1,0 +1,59 @@
+.second-block {
+    &__body {
+        border-top: 80px solid $colorMain;
+        padding: 0 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        gap: 56px;
+
+        @media (max-width: 1200px) {
+            gap: 24px;
+        }
+
+        @media (max-width: 992px) {
+            padding: 0 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media(max-width: 768px){
+            border-width: 64px;
+        }
+
+        @media(max-width: 576px){
+            margin: 0 -16px;
+        }
+
+        &--reverse {
+            & .second-block__image {
+                grid-column: 2/3;
+            }
+        }
+    }
+
+    &__image {
+        margin-top: -40px;
+
+        @media(max-width: 768px){
+            margin-top: -32px;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        @media (min-width: 992px) {
+            margin-top: 32px;
+        }
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+}

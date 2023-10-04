@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/_head.html', { 'title': 'BIM Ассоциация'})
+
+<body>
+    <div class="wrapper">
+        @@include('html/components/_header.html',{})
+        <main class="site-page">
+            @@include('html/blocks/_hero.html',{
+                'title': 'Об ассоциации',
+                'image': './images/blocks/about-hero/image.jpg'
+            })
+            @@include('html/blocks/page/_first-block.html',{})
+            @@include('html/blocks/page/_first-block-reverse.html',{})
+            @@include('html/blocks/page/_second-block.html',{})
+            @@include('html/blocks/page/_second-block-reverse.html',{})
+            @@include('html/blocks/page/_third-block.html',{})
+            @@include('html/blocks/page/_third-block-reverse.html',{})
+            @@include('html/blocks/page/_fourth-block-without-title.html',{})
+            @@include('html/blocks/page/_fourth-block.html',{})
+            @@include('html/blocks/page/_fifth-block.html',{})
+            @@include('html/blocks/page/_fifth-block-reverse.html',{})
+            @@include('html/blocks/page/_sixth-block.html',{})
+        </main>
+        @@include('html/components/_footer.html',{})
+    </div>
+    <script defer src="js/lozad.min.js"></script>
+    <script defer src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+.documents {
+    &__body {
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 32px;
+        row-gap: 24px;
+
+        @media (min-width: 1200px) {
+            padding-right: 8px;
+        }
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        padding-left: 24px;
+        position: relative;
+        
+        @media(max-width: 768px){
+            padding-left: 16px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: rgba(15, 117, 185, 0.6);
+        }
+
+        &:not(:first-child):not(:nth-child(2)):not(:nth-child(3))::before {
+            @media (min-width: 992px) {
+                height: calc(100% + 24px);
+                top: -24px;
+            }
+        }
+
+        &:not(:first-child):not(:nth-child(2))::before {
+            @media (max-width: 992px) {
+                height: calc(100% + 24px);
+                top: -24px;
+            }
+        }
+
+        &:not(:first-child)::before {
+            @media (max-width: 768px) {
+                height: calc(100% + 24px);
+                top: -24px;
+            }
+        }
+    }
+
+    &__item-link {
+        color: #363636;
+        display: flex;
+        align-items: start;
+        gap: 8px;
+        transition: all 0.5s ease-in-out 0s;
+
+        &:hover {
+            color: $colorMain;
+
+            & .documents__item-text::after {
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__item-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+    }
+
+    &__item-text {
+        display: block;
+        margin: auto 0;
+        transition: all 0.5s ease-in-out 0s;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background: $colorMain;
+            transition: all 0.5s ease-in-out 0s;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

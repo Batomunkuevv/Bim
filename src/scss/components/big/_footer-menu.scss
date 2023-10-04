@@ -1,0 +1,64 @@
+.footer-menu {
+    &__list {
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+
+            @media(max-width: 992px){
+                margin-bottom: 8px;
+            }
+        }
+
+        & a {
+            color: #fff;
+            transition: all 0.3s ease-in-out 0s;
+
+            &:hover {
+                color: $colorMain;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        line-height: toProcent(16, 20);
+
+        @media(max-width: 992px){
+            font-size: 14px;
+            line-height: toProcent(14, 17);
+        }
+    }
+
+    &__sublist {
+        padding-top: 8px;
+    }
+
+    &__subitem {
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__sublink {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 14px;
+        line-height: toProcent(14, 17);
+
+        @media(max-width: 992px){
+            font-size: 12px;
+        }
+
+        &-icon {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $colorMain;
+        }
+    }
+}

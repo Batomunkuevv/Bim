@@ -1,0 +1,67 @@
+.have-questions {
+    margin-top: 40px;
+
+    @media(max-width: 768px){
+        margin-top: 24px;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 424px 1fr;
+        gap: 24px;
+        align-items: center;
+        
+        @media(max-width: 1200px){
+            grid-template-columns: 376px 1fr;
+        }
+
+        @media(max-width: 992px){
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: stretch;
+        }
+    }
+    
+    &__content {
+    }
+    
+    &__title{
+        margin-bottom: 32px;
+        font-size: 32px;
+        line-height: toProcent(32, 39);
+
+        @media(max-width: 768px){
+            margin-bottom: 24px;
+            font-size: 24px;
+            line-height: toProcent(24, 29);
+        }
+    }
+
+    &__form {
+    }
+
+    &__map {
+        height: 472px;
+
+        @media(max-width: 992px){
+            width: 100%;
+            height: 400px;
+        }
+
+        @media(max-width: 768px){
+            height: 304px;
+        }
+
+        & .ymaps-2-1-79-ground-pane {
+            filter: grayscale(1);
+        }
+
+        & .ymaps-2-1-79-copyrights-pane {
+            filter: grayscale(1);
+        }
+        
+        & .ymaps-2-1-79-map{
+            width: 100% !important;
+        }
+    }
+}
