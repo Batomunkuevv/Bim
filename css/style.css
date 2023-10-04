@@ -1241,15 +1241,106 @@ svg {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   will-change: transform;
-  -webkit-transition: 2s cubic-bezier(0.05, 0.5, 0, 1);
-  -o-transition: 2s cubic-bezier(0.05, 0.5, 0, 1);
-  transition: 2s cubic-bezier(0.05, 0.5, 0, 1);
+  -webkit-transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+  -o-transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
+  transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
 
-.scene > *:not(.scene__title):not(.scene__btn) {
-  pointer-events: none;
+.scene__layer {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  inset: -1.5vw;
+}
+
+.scene__layer--bg {
+  inset: -2vw;
+  -webkit-transform: translateZ(-100px) scale(1.101);
+          transform: translateZ(-100px) scale(1.101);
+}
+
+.scene__layer--fog-under-all {
+  -webkit-transform: translateZ(-50px) scale(1.0506);
+          transform: translateZ(-50px) scale(1.0506);
+}
+
+.scene__layer--right-buildings {
+  -webkit-transform: translateZ(150px) scale(0.85);
+          transform: translateZ(150px) scale(0.85);
+}
+
+.scene__layer--evolution {
+  -webkit-transform: translateZ(120px) scale(0.881);
+          transform: translateZ(120px) scale(0.881);
+}
+
+.scene__layer--2000 {
+  -webkit-transform: translateZ(210px) scale(0.79);
+          transform: translateZ(210px) scale(0.79);
+}
+
+.scene__layer--oko {
+  -webkit-transform: translateZ(130px) scale(0.87);
+          transform: translateZ(130px) scale(0.87);
+}
+
+.scene__layer--iq-big {
+  -webkit-transform: translateZ(150px) scale(0.85);
+          transform: translateZ(150px) scale(0.85);
+}
+
+.scene__layer--eurasia {
+  -webkit-transform: translateZ(120px) scale(0.879);
+          transform: translateZ(120px) scale(0.879);
+}
+
+.scene__layer--iq-small {
+  -webkit-transform: translateZ(190px) scale(0.81);
+          transform: translateZ(190px) scale(0.81);
+}
+
+.scene__layer--fog-center-left {
+  -webkit-transform: translateZ(320px) scale(0.57);
+          transform: translateZ(320px) scale(0.57);
+}
+
+.scene__layer--fog-center-right {
+  -webkit-transform: translateZ(300px) scale(0.7);
+          transform: translateZ(300px) scale(0.7);
+}
+
+.scene__layer--center-back-building {
+  -webkit-transform: translateZ(270px) scale(0.73);
+          transform: translateZ(270px) scale(0.73);
+}
+
+.scene__layer--center-front-building {
+  -webkit-transform: translateZ(330px) scale(0.7);
+          transform: translateZ(330px) scale(0.7);
+}
+
+.scene__layer--fog-on-left {
+  -webkit-transform: translateZ(450px) scale(0.55);
+          transform: translateZ(450px) scale(0.55);
+}
+
+.scene__layer--fog-on-center {
+  -webkit-transform: translateZ(350px) scale(0.65);
+          transform: translateZ(350px) scale(0.65);
+}
+
+.scene__layer--btn {
+  -webkit-transform: translateZ(370px) scale(0.629);
+          transform: translateZ(370px) scale(0.629);
+}
+
+.scene__layer--title {
+  -webkit-transform: translateZ(300px) scale(0.7);
+          transform: translateZ(300px) scale(0.7);
 }
 
 .scene__title {
@@ -1257,15 +1348,14 @@ svg {
   width: 100%;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate3d(-50%, -48%, 300px) scale(0.7);
-          transform: translate3d(-50%, -48%, 300px) scale(0.7);
+  -webkit-transform: translate(-50%, -66%);
+      -ms-transform: translate(-50%, -66%);
+          transform: translate(-50%, -66%);
 }
 
 .scene__bg {
   position: absolute;
-  inset: -2%;
-  -webkit-transform: translateZ(-100px) scale(1.101);
-          transform: translateZ(-100px) scale(1.101);
+  inset: 0;
 }
 
 .scene__bg img {
@@ -1275,12 +1365,10 @@ svg {
 
 .scene__fog-under-all {
   position: absolute;
-  bottom: -2%;
+  bottom: 0;
   left: -1%;
   width: 102%;
   height: 69%;
-  -webkit-transform: translateZ(-50px) scale(1.0506);
-          transform: translateZ(-50px) scale(1.0506);
 }
 
 .scene__fog-under-all img {
@@ -1290,12 +1378,13 @@ svg {
 
 .scene__right-buildings {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 13.9);
+  bottom: 0;
   left: 50%;
   width: 28.1%;
   aspect-ratio: 539/824;
-  -webkit-transform: translate3d(33.3%, 50%, 150px) scale(0.85);
-          transform: translate3d(33.3%, 50%, 150px) scale(0.85);
+  -webkit-transform: translateX(46.3%);
+      -ms-transform: translateX(46.3%);
+          transform: translateX(46.3%);
 }
 
 .scene__right-buildings img {
@@ -1304,12 +1393,13 @@ svg {
 
 .scene__evolution {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 9.3);
+  bottom: 2%;
   left: 50%;
   width: 8.43%;
   aspect-ratio: 18/55;
-  -webkit-transform: translate3d(334.3%, 50%, 120px) scale(0.881);
-          transform: translate3d(334.3%, 50%, 120px) scale(0.881);
+  -webkit-transform: translateX(382.3%);
+      -ms-transform: translateX(382.3%);
+          transform: translateX(382.3%);
 }
 
 .scene__evolution img {
@@ -1318,12 +1408,13 @@ svg {
 
 .scene__2000 {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 7.5);
+  bottom: 0;
   left: 50%;
   width: 6.75%;
   aspect-ratio: 121/314;
-  -webkit-transform: translate3d(136%, 50%, 210px) scale(0.79);
-          transform: translate3d(136%, 50%, 210px) scale(0.79);
+  -webkit-transform: translateX(176%);
+      -ms-transform: translateX(176%);
+          transform: translateX(176%);
 }
 
 .scene__2000 img {
@@ -1332,12 +1423,13 @@ svg {
 
 .scene__oko {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 13.7);
+  bottom: 0;
   left: 50%;
   width: 9%;
   aspect-ratio: 43/205;
-  -webkit-transform: translate3d(-387%, 50%, 130px) scale(0.87);
-          transform: translate3d(-387%, 50%, 130px) scale(0.87);
+  -webkit-transform: translateX(-454%);
+      -ms-transform: translateX(-454%);
+          transform: translateX(-454%);
 }
 
 .scene__oko img {
@@ -1346,12 +1438,13 @@ svg {
 
 .scene__iq-big {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 9.9);
+  bottom: 0;
   left: 50%;
   width: 30.8%;
   aspect-ratio: 581/536;
-  -webkit-transform: translate3d(-120%, 50%, 150px) scale(0.85);
-          transform: translate3d(-120%, 50%, 150px) scale(0.85);
+  -webkit-transform: translateX(-137%);
+      -ms-transform: translateX(-137%);
+          transform: translateX(-137%);
 }
 
 .scene__iq-big img {
@@ -1360,12 +1453,13 @@ svg {
 
 .scene__eurasia {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 12.6);
+  bottom: 0;
   left: 50%;
   width: 13.35%;
   aspect-ratio: 16/47;
-  -webkit-transform: translate3d(-180%, 50%, 120px) scale(0.879);
-          transform: translate3d(-180%, 50%, 120px) scale(0.879);
+  -webkit-transform: translateX(-210%);
+      -ms-transform: translateX(-210%);
+          transform: translateX(-210%);
 }
 
 .scene__eurasia img {
@@ -1374,12 +1468,13 @@ svg {
 
 .scene__iq-small {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 7);
+  bottom: 0;
   left: 50%;
   width: 15.7%;
   aspect-ratio: 286/293;
-  -webkit-transform: translate3d(-192.2%, 50%, 190px) scale(0.81);
-          transform: translate3d(-192.2%, 50%, 190px) scale(0.81);
+  -webkit-transform: translateX(-237.2%);
+      -ms-transform: translateX(-237.2%);
+          transform: translateX(-237.2%);
 }
 
 .scene__iq-small img {
@@ -1388,11 +1483,12 @@ svg {
 
 .scene__fog-center-left {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 8.5);
+  bottom: -8.2vw;
   left: 50%;
   width: 48.6%;
-  -webkit-transform: translate3d(-78%, 50%, 320px) scale(0.57);
-          transform: translate3d(-78%, 50%, 320px) scale(0.57);
+  -webkit-transform: translateX(-78%);
+      -ms-transform: translateX(-78%);
+          transform: translateX(-78%);
   aspect-ratio: 621/264;
 }
 
@@ -1403,11 +1499,12 @@ svg {
 
 .scene__fog-center-right {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 9.7);
+  bottom: -0.5vw;
   left: 50%;
   width: 52.3%;
-  -webkit-transform: translate3d(-42%, 50%, 500px) scale(0.5);
-          transform: translate3d(-42%, 50%, 500px) scale(0.5);
+  -webkit-transform: translateX(-42%);
+      -ms-transform: translateX(-42%);
+          transform: translateX(-42%);
   aspect-ratio: 811/207;
 }
 
@@ -1418,12 +1515,13 @@ svg {
 
 .scene__center-back-building {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 15.3);
-  left: 50.3%;
+  bottom: -0.5%;
+  left: 50%;
   width: 28.45%;
   aspect-ratio: 546/950;
-  -webkit-transform: translate3d(-49%, 50%, 270px) scale(0.73);
-          transform: translate3d(-49%, 50%, 270px) scale(0.73);
+  -webkit-transform: translateX(-47.4%);
+      -ms-transform: translateX(-47.4%);
+          transform: translateX(-47.4%);
   z-index: 2;
 }
 
@@ -1434,13 +1532,14 @@ svg {
 
 .scene__center-front-building {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 10.8);
-  left: 50.6%;
+  bottom: 0;
+  left: 50%;
   z-index: 2;
   width: 23.5%;
   aspect-ratio: 436/517;
-  -webkit-transform: translate3d(-50%, 50%, 330px) scale(0.67);
-          transform: translate3d(-50%, 50%, 330px) scale(0.67);
+  -webkit-transform: translateX(-49.8%);
+      -ms-transform: translateX(-49.8%);
+          transform: translateX(-49.8%);
 }
 
 .scene__center-front-building img {
@@ -1449,11 +1548,9 @@ svg {
 
 .scene__fog-on-left {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 18.1);
-  left: 50%;
+  bottom: -2.2vw;
+  left: -2.3%;
   width: 51.62%;
-  -webkit-transform: translate3d(-80%, 50%, 450px) scale(0.55);
-          transform: translate3d(-80%, 50%, 450px) scale(0.55);
   aspect-ratio: 799/997;
 }
 
@@ -1464,11 +1561,12 @@ svg {
 
 .scene__fog-on-center {
   position: absolute;
-  bottom: calc((1vh + 1vw) * 11);
+  bottom: -1.1vw;
   left: 50%;
   width: 57.55%;
-  -webkit-transform: translate3d(-52%, 50%, 350px) scale(0.65);
-          transform: translate3d(-52%, 50%, 350px) scale(0.65);
+  -webkit-transform: translateX(-52%);
+      -ms-transform: translateX(-52%);
+          transform: translateX(-52%);
   aspect-ratio: 910/460;
 }
 
@@ -1481,8 +1579,9 @@ svg {
   position: absolute;
   top: 62%;
   left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 370px) scale(0.629);
-          transform: translate3d(-50%, -50%, 370px) scale(0.629);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .latest-news__list {
@@ -2015,80 +2114,50 @@ svg {
 
 @media (max-height: 750px) and (min-width: 1300px) {
   .scene__title {
-    -webkit-transform: translate3d(-50%, -45%, 300px) scale(0.7);
-            transform: translate3d(-50%, -45%, 300px) scale(0.7);
+    -webkit-transform: translate(-50%, -53%);
+        -ms-transform: translate(-50%, -53%);
+            transform: translate(-50%, -53%);
   }
 
   .scene__right-buildings {
     width: 23.9%;
-    bottom: calc((1vh + 1vw) * 12.3);
   }
 
   .scene__evolution {
     width: 7.13%;
-    -webkit-transform: translate3d(336.5%, 50%, 120px) scale(0.881);
-            transform: translate3d(336.5%, 50%, 120px) scale(0.881);
-    bottom: calc((1vh + 1vw) * 8.3);
   }
 
   .scene__2000 {
     width: 5.75%;
-    bottom: calc((1vh + 1vw) * 6.8);
-    -webkit-transform: translate3d(137.9%, 50%, 210px) scale(0.79);
-            transform: translate3d(137.9%, 50%, 210px) scale(0.79);
   }
 
   .scene__oko {
-    bottom: calc((1vh + 1vw) * 12.3);
     width: 7.7%;
   }
 
   .scene__iq-big {
-    bottom: calc((1vh + 1vw) * 8.8);
-    -webkit-transform: translate3d(-119.8%, 50%, 150px) scale(0.85);
-            transform: translate3d(-119.8%, 50%, 150px) scale(0.85);
     width: 26.3%;
   }
 
   .scene__eurasia {
-    bottom: calc((1vh + 1vw) * 11.4);
     width: 11.35%;
   }
 
   .scene__iq-small {
-    bottom: calc((1vh + 1vw) * 6.1);
-    -webkit-transform: translate3d(-193.3%, 50%, 190px) scale(0.81);
-            transform: translate3d(-193.3%, 50%, 190px) scale(0.81);
     width: 13.3%;
-  }
-
-  .scene__fog-center-left {
-    bottom: calc((1vh + 1vw) * 8);
-  }
-
-  .scene__fog-center-right {
-    bottom: calc((1vh + 1vw) * 8.8);
   }
 
   .scene__center-back-building {
     width: 23.35%;
-    bottom: calc((1vh + 1vw) * 13.4);
   }
 
   .scene__center-front-building {
     width: 19.3%;
-    bottom: calc((1vh + 1vw) * 9.5);
   }
 
   .scene__fog-on-left {
-    bottom: calc((1vh + 1vw) * 15.5);
-    -webkit-transform: translate3d(-93%, 50%, 450px) scale(0.55);
-            transform: translate3d(-93%, 50%, 450px) scale(0.55);
     width: 41.62%;
-  }
-
-  .scene__fog-on-center {
-    bottom: calc((1vh + 1vw) * 10.9);
+    left: -1.5%;
   }
 }
 
@@ -2171,123 +2240,119 @@ svg {
   }
 
   .scene__title {
-    -webkit-transform: translate3d(-50%, -52%, 300px) scale(0.7);
-            transform: translate3d(-50%, -52%, 300px) scale(0.7);
+    -webkit-transform: translate(-50%, -72%);
+        -ms-transform: translate(-50%, -72%);
+            transform: translate(-50%, -72%);
   }
 
   .scene__right-buildings {
-    bottom: 50%;
     width: unset;
     height: 80%;
     left: 50%;
-    -webkit-transform: translate3d(32%, 63%, 150px) scale(0.85);
-            transform: translate3d(32%, 63%, 150px) scale(0.85);
+    -webkit-transform: translateX(32%);
+        -ms-transform: translateX(32%);
+            transform: translateX(32%);
   }
 
   .scene__evolution {
     right: 50%;
     left: auto;
-    -webkit-transform: translate3d(423.6%, 100%, 120px) scale(0.881);
-            transform: translate3d(423.6%, 100%, 120px) scale(0.881);
+    -webkit-transform: translateX(423.6%);
+        -ms-transform: translateX(423.6%);
+            transform: translateX(423.6%);
     width: unset;
     height: 49%;
-    bottom: 50%;
   }
 
   .scene__2000 {
     width: unset;
     height: 32.91%;
     left: 50%;
-    bottom: 50%;
-    -webkit-transform: translate3d(130%, 134%, 210px) scale(0.79);
-            transform: translate3d(130%, 134%, 210px) scale(0.79);
+    -webkit-transform: translateX(130%);
+        -ms-transform: translateX(130%);
+            transform: translateX(130%);
   }
 
   .scene__oko {
     height: 78%;
     left: auto;
     right: 50%;
-    bottom: 50%;
-    -webkit-transform: translate3d(-310.7%, 62%, 130px) scale(0.87);
-            transform: translate3d(-310.7%, 62%, 130px) scale(0.87);
+    -webkit-transform: translateX(-310.7%);
+        -ms-transform: translateX(-310.7%);
+            transform: translateX(-310.7%);
     width: unset;
   }
 
   .scene__iq-big {
     height: 51.75%;
     width: unset;
-    bottom: 50%;
     left: auto;
     right: 50%;
-    -webkit-transform: translate3d(-27%, 93%, 150px) scale(0.85);
-            transform: translate3d(-27%, 93%, 150px) scale(0.85);
+    -webkit-transform: translateX(-27%);
+        -ms-transform: translateX(-27%);
+            transform: translateX(-27%);
   }
 
   .scene__eurasia {
     width: unset;
     left: auto;
     right: 50%;
-    bottom: 50%;
     height: 71.7%;
-    -webkit-transform: translate3d(-98%, 70%, 120px) scale(0.879);
-            transform: translate3d(-98%, 70%, 120px) scale(0.879);
+    -webkit-transform: translateX(-98%);
+        -ms-transform: translateX(-98%);
+            transform: translateX(-98%);
   }
 
   .scene__iq-small {
     width: unset;
     height: 29.1%;
     left: auto;
-    bottom: 50%;
     right: 50%;
-    -webkit-transform: translate3d(-106.9%, 154%, 190px) scale(0.81);
-            transform: translate3d(-106.9%, 154%, 190px) scale(0.81);
+    -webkit-transform: translateX(-118.9%);
+        -ms-transform: translateX(-118.9%);
+            transform: translateX(-118.9%);
   }
 
   .scene__fog-center-left {
-    bottom: 50%;
+    bottom: -11.2vh;
     width: unset;
-    -webkit-transform: translate3d(-87%, 114%, 320px) scale(0.57);
-            transform: translate3d(-87%, 114%, 320px) scale(0.57);
+    -webkit-transform: translatex(-87%);
+        -ms-transform: translatex(-87%);
+            transform: translatex(-87%);
     height: 39.1%;
   }
 
   .scene__fog-center-right {
-    bottom: 50%;
     width: unset;
-    -webkit-transform: translate3d(-32%, 157%, 500px) scale(0.5);
-            transform: translate3d(-32%, 157%, 500px) scale(0.5);
+    -webkit-transform: translatex(-32%);
+        -ms-transform: translatex(-32%);
+            transform: translatex(-32%);
     height: 21%;
   }
 
   .scene__center-back-building {
     height: 91%;
     width: unset;
-    bottom: 50%;
-    -webkit-transform: translate3d(-49%, 56.3%, 270px) scale(0.73);
-            transform: translate3d(-49%, 56.3%, 270px) scale(0.73);
+    -webkit-transform: translateX(-49%);
+        -ms-transform: translateX(-49%);
+            transform: translateX(-49%);
   }
 
   .scene__center-front-building {
-    bottom: 50%;
-    -webkit-transform: translate3d(-50%, 88%, 330px) scale(0.67);
-            transform: translate3d(-50%, 88%, 330px) scale(0.67);
     width: unset;
     height: 49.5%;
   }
 
   .scene__fog-on-left {
-    bottom: 50%;
-    -webkit-transform: translate3d(0, 67%, 450px) scale(0.55);
-            transform: translate3d(0, 67%, 450px) scale(0.55);
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
     width: unset;
     height: 70%;
     left: -14%;
   }
 
   .scene__fog-on-center {
-    bottom: 50%;
-    -webkit-transform: translate3d(-52%, 84%, 350px) scale(0.65);
-            transform: translate3d(-52%, 84%, 350px) scale(0.65);
     left: 50%;
     width: unset;
     height: 52.6%;
@@ -2714,8 +2779,9 @@ svg {
 
 @media (max-width: 992px) and (min-height: 1000px) {
   .scene__title {
-    -webkit-transform: translate3d(-50%, -65%, 300px) scale(0.7);
-            transform: translate3d(-50%, -65%, 300px) scale(0.7);
+    -webkit-transform: translate(-50%, -82%);
+        -ms-transform: translate(-50%, -82%);
+            transform: translate(-50%, -82%);
   }
 }
 
@@ -2784,11 +2850,6 @@ svg {
 
   .container {
     max-width: 540px;
-  }
-
-  .scene__title {
-    -webkit-transform: translate3d(-50%, -65%, 300px) scale(0.7);
-            transform: translate3d(-50%, -65%, 300px) scale(0.7);
   }
 
   .latest-news__list {
@@ -2891,65 +2952,69 @@ svg {
   }
 
   .scene__title {
-    -webkit-transform: translate3d(-50%, -46%, 300px) scale(0.7);
-            transform: translate3d(-50%, -46%, 300px) scale(0.7);
+    -webkit-transform: translate(-50%, -53%);
+        -ms-transform: translate(-50%, -53%);
+            transform: translate(-50%, -53%);
   }
 
   .scene__right-buildings {
     height: 64%;
-    bottom: 2%;
-    -webkit-transform: translateX(37%) translateZ(150px) scale(0.85);
-            transform: translateX(37%) translateZ(150px) scale(0.85);
+    -webkit-transform: translateX(37%);
+        -ms-transform: translateX(37%);
+            transform: translateX(37%);
   }
 
   .scene__evolution {
     height: 41%;
-    -webkit-transform: translate3d(427.6%, 113%, 120px) scale(0.881);
-            transform: translate3d(427.6%, 113%, 120px) scale(0.881);
+    -webkit-transform: translateX(427.6%);
+        -ms-transform: translateX(427.6%);
+            transform: translateX(427.6%);
   }
 
   .scene__2000 {
     height: 25%;
-    -webkit-transform: translateX(163%) translateZ(210px) scale(0.79);
-            transform: translateX(163%) translateZ(210px) scale(0.79);
-    bottom: 7%;
+    -webkit-transform: translateX(163%);
+        -ms-transform: translateX(163%);
+            transform: translateX(163%);
   }
 
   .scene__oko {
     height: 67%;
-    -webkit-transform: translateX(-292.7%) translateZ(130px) scale(0.87);
-            transform: translateX(-292.7%) translateZ(130px) scale(0.87);
-    bottom: 1%;
+    -webkit-transform: translateX(-292.7%);
+        -ms-transform: translateX(-292.7%);
+            transform: translateX(-292.7%);
   }
 
   .scene__iq-big {
     height: 44.75%;
-    -webkit-transform: translate3d(-21%, 110%, 150px) scale(0.85);
-            transform: translate3d(-21%, 110%, 150px) scale(0.85);
+    -webkit-transform: translateX(-21%);
+        -ms-transform: translateX(-21%);
+            transform: translateX(-21%);
   }
 
   .scene__eurasia {
     height: 61.7%;
-    -webkit-transform: translate3d(-83%, 84%, 120px) scale(0.879);
-            transform: translate3d(-83%, 84%, 120px) scale(0.879);
+    -webkit-transform: translateX(-83%);
+        -ms-transform: translateX(-83%);
+            transform: translateX(-83%);
   }
 
   .scene__iq-small {
     height: 25.3%;
-    -webkit-transform: translate3d(-94.9%, 175%, 190px) scale(0.81);
-            transform: translate3d(-94.9%, 175%, 190px) scale(0.81);
+    -webkit-transform: translateX(-104.9%);
+        -ms-transform: translateX(-104.9%);
+            transform: translateX(-104.9%);
   }
 
   .scene__center-back-building {
     height: 80%;
-    -webkit-transform: translate3d(-49%, 60.3%, 270px) scale(0.73);
-            transform: translate3d(-49%, 60.3%, 270px) scale(0.73);
+    -webkit-transform: translateX(-49%);
+        -ms-transform: translateX(-49%);
+            transform: translateX(-49%);
   }
 
   .scene__center-front-building {
     height: 44.5%;
-    -webkit-transform: translate3d(-50%, 94.6%, 330px) scale(0.67);
-            transform: translate3d(-50%, 94.6%, 330px) scale(0.67);
   }
 
   .scene__btn {
@@ -3005,8 +3070,7 @@ svg {
     right: 16px;
   }
 
-  .scene__btn {
-    -webkit-transform: translate3d(-50%, -50%, 370px) scale(0.529);
-            transform: translate3d(-50%, -50%, 370px) scale(0.529);
+  .hero-parallax__btn {
+    padding: 12px 24px;
   }
 }
