@@ -34,8 +34,7 @@ const initParallax = () => {
 
     if (!parallaxScene) return;
 
-    parallaxScene.addEventListener("mousemove", moveParallax);
-    parallaxScene.addEventListener("mouseleave", stopParallax);
+    window.addEventListener("mousemove", moveParallax);
     parallaxScene.addEventListener("touchmove", moveParallax);
 
     function moveParallax(e) {
@@ -46,11 +45,6 @@ const initParallax = () => {
 
         document.documentElement.style.setProperty("--move-x", rotateX);
         document.documentElement.style.setProperty("--move-y", rotateY);
-    }
-
-    function stopParallax() {
-        document.documentElement.style.setProperty("--move-x", "0deg");
-        document.documentElement.style.setProperty("--move-y", "0deg");
     }
 };
 
