@@ -2159,6 +2159,14 @@ svg {
   .scene__fog-on-left {
     width: 41.62%;
     left: -1.5%;
+    bottom: -2.4vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero-parallax__btn {
+    padding: calc((1vh + 1vw) * 0.6) calc((1vh + 1vw) * 1.07);
+    font-size: calc((1vh + 1vw) * 0.535);
   }
 }
 
