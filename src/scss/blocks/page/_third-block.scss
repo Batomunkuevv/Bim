@@ -78,8 +78,8 @@
     }
 
     &__title {
-        padding-top: 48px;
-        padding-bottom: 48px;
+        padding-top: 18px;
+        padding-bottom: 18px;
         padding-left: 224px;
         padding-right: 40px;
         margin-bottom: 32px;
@@ -118,6 +118,14 @@
             display: flex;
             flex-direction: column;
             padding: 0;
+        }
+
+        &.is-one-column {
+            @media (min-width: 992px) {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
         }
     }
 

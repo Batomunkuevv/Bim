@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/components/_head.html', { 'title': 'BIM Ассоциация'})
+    @@include('html/components/_head.html', { 'title': 'БИМ Ассоциация'})
 
     <body>
         <div class="wrapper">
@@ -8,7 +8,8 @@
             <main class="site-page">
                 @@include('html/blocks/_hero.html',{
                     "title": "Документы",
-                    "image": "./images/blocks/documents-hero/image.jpg"
+                    "image": "./images/blocks/documents-hero/image.jpg",
+                    'extraClass': 'hero--documents'
                 })
                 @@include('html/blocks/documents/_documents.html',{})
             </main>

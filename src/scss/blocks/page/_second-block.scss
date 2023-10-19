@@ -17,12 +17,16 @@
             flex-direction: column;
         }
 
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
             border-width: 64px;
         }
 
-        @media(max-width: 576px){
+        @media (max-width: 576px) {
             margin: 0 -16px;
+        }
+
+        &.no-image {
+            display: block;
         }
 
         &--reverse {
@@ -35,7 +39,7 @@
     &__image {
         margin-top: -40px;
 
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
             margin-top: -32px;
         }
 

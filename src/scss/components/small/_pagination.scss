@@ -1,0 +1,43 @@
+.pagination {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    &__item {
+        min-width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+        height: 24px;
+        font-size: 14px;
+        line-height: toProcent(14, 17);
+        color: $colorSecond;
+        transition: all 0.5s ease-in-out 0s;
+
+        &.next,
+        &.prev {
+            color: $colorMain;
+        }
+
+        &:hover {
+            color: $colorMain;
+        }
+
+        &.current {
+            color: $colorMain;
+            border-bottom: 1px solid $colorMain;
+        }
+    }
+}

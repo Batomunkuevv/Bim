@@ -1,12 +1,36 @@
 .footer-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    @media(max-width: 992px){
+        gap: 8px;
+    }
+
+    &__column {
+    }
+
     &__list {
     }
 
     &__item {
+        width: fit-content;
+
+        &.is-active {
+            & .footer-menu__link {
+                border-bottom: 1px solid $colorMain;
+            }
+        }
+
         &:not(:last-child) {
             margin-bottom: 16px;
 
-            @media(max-width: 992px){
+            @media (max-width: 992px) {
                 margin-bottom: 8px;
             }
         }
@@ -24,8 +48,9 @@
     &__link {
         display: block;
         line-height: toProcent(16, 20);
+        width: fit-content;
 
-        @media(max-width: 992px){
+        @media (max-width: 992px) {
             font-size: 14px;
             line-height: toProcent(14, 17);
         }
@@ -36,6 +61,14 @@
     }
 
     &__subitem {
+        width: fit-content;
+
+        &.is-active {
+            & .footer-menu__sublink {
+                border-bottom: 1px solid $colorMain;
+            }
+        }
+
         &:not(:last-child) {
             margin-bottom: 4px;
         }
@@ -47,8 +80,9 @@
         gap: 4px;
         font-size: 14px;
         line-height: toProcent(14, 17);
+        width: fit-content;
 
-        @media(max-width: 992px){
+        @media (max-width: 992px) {
             font-size: 12px;
         }
 

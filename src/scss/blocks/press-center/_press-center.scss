@@ -1,0 +1,15 @@
+.press-center {
+
+    &__news {
+    }
+
+    &__news-item {
+        &:not(:last-child){
+            margin-bottom: 24px;
+
+            @media(max-width: 992px){
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

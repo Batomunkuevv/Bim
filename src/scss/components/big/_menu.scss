@@ -19,6 +19,10 @@
 
         &.is-active {
             border-bottom: 1px solid $colorMain;
+
+            & .menu__link {
+                pointer-events: none;
+            }
         }
 
         &:hover {
@@ -26,6 +30,10 @@
                 opacity: 1;
                 transform: unset;
                 visibility: visible;
+            }
+
+            & .menu__arrow {
+                transform: rotate(180deg);
             }
         }
     }
@@ -44,8 +52,11 @@
         }
 
         &:hover {
-            & .menu__arrow {
-                transform: rotate(180deg);
+
+            &::after {
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
             }
         }
 
@@ -60,14 +71,6 @@
             transition: all 0.5s ease-in-out 0s;
             opacity: 0;
             visibility: hidden;
-        }
-
-        &:hover {
-            &::after {
-                width: 100%;
-                opacity: 1;
-                visibility: visible;
-            }
         }
     }
 
@@ -99,6 +102,7 @@
             visibility: hidden;
             scrollbar-width: 4px;
             scrollbar-color: $colorMain #fff;
+            box-shadow: 0 24px 48px #191d321a;
 
             &::-webkit-scrollbar {
                 width: 4px;
@@ -141,9 +145,8 @@
         position: relative;
 
         @media (min-width: 992px) {
-            padding: 8px 16px;
-            background: rgba(15, 117, 185, 0.1);
-            backdrop-filter: blur(3px);
+            padding: 4px 8px;
+            background: #fff;
 
             &::before {
                 content: "";

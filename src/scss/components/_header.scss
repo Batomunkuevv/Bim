@@ -40,7 +40,11 @@
 
         & .menu__sublink {
             color: #fff;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(7, 57, 90, 0.4);
+            
+            @media(min-width: 992px){
+                backdrop-filter: blur(3px);
+            }
 
             @media (max-width: 992px) {
                 color: $colorSecond;
@@ -64,7 +68,8 @@
 
         & .languages__link {
             color: #fff;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(7, 57, 90, 0.4);
+            backdrop-filter: blur(3px);
 
             &::before {
                 background: #fff;
@@ -98,12 +103,6 @@
     }
 
     &__logo {
-        margin-right: 16px;
-
-        @media (max-width: 1200px) {
-            max-width: 170px;
-        }
-
         @media (max-width: 992px) {
             margin-right: auto;
         }

@@ -1,4 +1,4 @@
-.latest-new {
+.new {
     &__link {
         padding: 32px 32px 40px 448px;
         background: #fff;
@@ -36,7 +36,7 @@
                 visibility: visible;
             }
 
-            & .latest-new__title {
+            & .new__title {
                 color: $colorMain;
             }
         }
@@ -45,7 +45,7 @@
     &__image {
         width: 424px;
 
-        @media(max-width: 1200px){
+        @media (max-width: 1200px) {
             width: 328px;
         }
 
@@ -97,6 +97,10 @@
 
     &__excerpt {
         margin-bottom: 24px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
 
         @media (max-width: 992px) {
             display: none;

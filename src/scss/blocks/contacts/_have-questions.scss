@@ -23,6 +23,13 @@
     }
     
     &__content {
+        & .wpcf7{
+            margin: 0 !important;
+        }
+
+        & .wpcf7-response-output{
+            margin: 8px 0 0 !important;
+        }
     }
     
     &__title{

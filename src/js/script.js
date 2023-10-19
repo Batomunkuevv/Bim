@@ -60,24 +60,24 @@ const initLozad = () => {
     });
 };
 
-const initLatestNewHover = () => {
-    const latestNews = document.querySelectorAll(".latest-new");
+const initNewHover = () => {
+    const news = document.querySelectorAll(".new");
 
-    if (!latestNews) return;
+    if (!news) return;
 
-    latestNews.forEach((latestNew) => {
-        const latestNewLine = latestNew.querySelector(".latest-new__line");
-        const latestNewMore = latestNew.querySelector(".latest-new__more");
+    news.forEach((newItem) => {
+        const newLine = newItem.querySelector(".new__line");
+        const newMore = newItem.querySelector(".new__more");
 
-        latestNew.addEventListener("mouseover", shrinkLine);
-        latestNew.addEventListener("mouseleave", growLine);
+        newItem.addEventListener("mouseover", shrinkLine);
+        newItem.addEventListener("mouseleave", growLine);
 
         function shrinkLine() {
-            latestNewLine.style.width = `${Math.round(latestNewMore.getBoundingClientRect().width)}px`;
+            newLine.style.width = `${Math.round(newMore.getBoundingClientRect().width)}px`;
         }
 
         function growLine() {
-            latestNewLine.style.width = ``;
+            newLine.style.width = ``;
         }
     });
 };
@@ -145,11 +145,28 @@ const initBurgerMenu = () => {
     }
 };
 
+const initCalendars = () => {
+    const calendars = document.querySelectorAll('[data-calendar]');
+
+    if(!calendars) return;
+
+    calendars.forEach(calendar => {
+        calendar = new AirDatepicker(calendar);
+
+        if(window.matchMedia('(max-width: 992px)').matches){
+            calendar.update({
+                isMobile: true
+            })
+        }
+    })
+}
+
 window.addEventListener("DOMContentLoaded", (e) => {
     initBurgerMenu();
     initParallax();
     initLozad();
     initContactsMap();
-    initLatestNewHover();
+    initNewHover();
     rerenderFooter();
+    initCalendars();
 });

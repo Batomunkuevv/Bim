@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/_head.html', { 'title': 'БИМ Ассоциация'})
+
+    <body>
+        <div class="wrapper">
+            @@include('html/components/_header.html',{})
+            <main class="site-page">
+                @@include('html/blocks/_hero.html', {
+                    "title": 'Пресс-центр',
+                    'image': '@img/blocks/about-hero/image.jpg',
+                    'extraClass': ''
+                })
+                @@include('html/blocks/press-center/_press-center.html',{})
+            </main>
+            @@include('html/components/_footer.html',{})
+        </div>
+        <script defer src="js/lozad.min.js"></script>
+        <script defer src="js/script.js"></script>
+    </body>
+</html>

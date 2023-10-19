@@ -5,12 +5,14 @@
     &__list {
         margin-bottom: 56px;
 
-        @media(max-width: 768px){
+        @media (max-width: 768px) {
             margin-bottom: 32px;
         }
     }
 
     &__item {
+        position: relative;
+
         &:not(:last-child) {
             margin-bottom: 24px;
 
@@ -24,7 +26,7 @@
         margin-left: auto;
         margin-right: auto;
 
-        @media(max-width: 576px){
+        @media (max-width: 576px) {
             width: 100%;
         }
     }

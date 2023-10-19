@@ -20,26 +20,30 @@
 
 //*<Components>================================================================================================
 
-//?==============<Big>============== 
+//?==============<Big>==============
 
-@import "components/big/latest-new";
+@import "components/big/new";
 @import "components/big/hot-new";
 @import "components/big/search";
 @import "components/big/footer-menu";
 @import "components/big/menu";
 @import "components/big/form";
 @import "components/big/hero";
+@import "components/big/result-article";
+@import "components/big/people-card";
 
 //?==============</Big>=============
 
 //?==============<Small>==============
 
+@import "components/small/pagination";
 @import "components/small/arrow";
 @import "components/small/button";
 @import "components/small/languages";
 @import "components/small/burger";
 @import "components/small/input";
 @import "components/small/textarea";
+@import "components/small/selector";
 
 //?==============</Small>=============
 
@@ -74,19 +78,34 @@
     }
 }
 
-.site-page{
+.site-page {
     padding-bottom: 136px;
     flex: 1 1 auto;
 
-    @media(max-width: 1200px){
+    @media (max-width: 1200px) {
         padding-bottom: 104px;
     }
 
-    @media(max-width: 992px){
-        padding-bottom: 96px;
+    @media (max-width: 992px) {
+        padding-bottom: 80px;
+    }
+
+    &--404{
+        padding: 144px 0 241px;
+
+        @media (max-width: 992px) {
+            padding: 80px 0;
+        }
+    }
+
+    &--search {
+        padding: 136px 0 180px;
+
+        @media (max-width: 992px) {
+            padding: 80px 0;
+        }
     }
 }
-
 
 //*</Main grid>=================================================================================================
 
@@ -115,5 +134,25 @@
 @import "blocks/page/fourth-block";
 @import "blocks/page/fifth-block";
 @import "blocks/page/sixth-block";
+
+//? Post
+
+@import "blocks/post/post";
+
+//? Search
+
+@import "blocks/search/search-result";
+
+//? Press center
+
+@import "blocks/press-center/press-center";
+
+//? 404
+
+@import "blocks/404/404";
+
+//? List
+
+@import "blocks/list/list";
 
 //TODO</Blocks>=================================================================================================

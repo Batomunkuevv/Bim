@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/_head.html', { 'title': 'БИМ Ассоциация'})
+
+    <body>
+        <div class="wrapper">
+            @@include('html/components/_header.html',{})
+            <main class="site-page">
+                <article class="post">
+                    @@include('html/blocks/post/_post_hero.html',{})
+                    @@include('html/blocks/post/_post-content.html',{})
+                </article>
+            </main>
+            @@include('html/components/_footer.html',{})
+        </div>
+        <script defer src="js/lozad.min.js"></script>
+        <script defer src="js/script.js"></script>
+    </body>
+</html>

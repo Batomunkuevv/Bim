@@ -1,0 +1,331 @@
+<div class="list">
+    <div class="container">
+        <header class="list__header">
+            <form action="#" class="list__filters filters">
+                <div class="filters__item">
+                    <input type="text" name="name" class="filters__filter" placeholder="ФИО" />
+                </div>
+                <div class="filters__item">
+                    <input type="text" name="organisation" class="filters__filter" placeholder="Организация" />
+                </div>
+                <div class="filters__item">
+                    <input data-calendar type="text" name="inclusion" class="filters__filter" placeholder="Дата включения:" />
+                </div>
+            </form>
+            <div class="list__buttons">
+                <button type="button" class="list__reset">
+                    <span class="list__reset-text">Очистить</span>
+                    <span class="list__reset-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path
+                                d="M0.864846 1.80119L10.1982 11.1345C10.3151 11.2632 10.4789 11.3334 10.666 11.3334C11.0286 11.3334 11.3327 11.0293 11.3327 10.6667C11.3327 10.4796 11.2625 10.3158 11.1339 10.1989L1.80052 0.865517C1.68356 0.736862 1.51982 0.666687 1.33268 0.666687C0.970109 0.666687 0.666016 0.97078 0.666016 1.33335C0.666016 1.52049 0.736191 1.68423 0.864846 1.80119ZM10.1982 0.865517L0.864846 10.1989C0.736191 10.3158 0.666016 10.4796 0.666016 10.6667C0.666016 11.0293 0.970109 11.3334 1.33268 11.3334C1.51982 11.3334 1.68356 11.2632 1.80052 11.1345L11.1339 1.80119C11.2625 1.68423 11.3327 1.52049 11.3327 1.33335C11.3327 0.97078 11.0286 0.666687 10.666 0.666687C10.4789 0.666687 10.3151 0.736862 10.1982 0.865517Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                    </span>
+                </button>
+                <button type="button" class="list__submit button">Применить</button>
+            </div>
+        </header>
+        <div class="list__body">
+            <ul class="list__items">
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Батомункуев Александр Александрович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Иванов Иван Иванович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle is-red"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--exclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Иванов Иван Иванович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Иванов Иван Иванович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Иванов Иван Иванович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Иванов Иван Иванович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Иванов Иван Иванович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Иванов Иван Иванович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="list__item">
+                    <article class="people-card">
+                        <h2 class="people-card__name">Иванов Иван Иванович</h2>
+                        <div class="people-card__status">
+                            <span class="people-card__status-circle"></span>
+                            <span class="people-card__status-text">действует</span>
+                        </div>
+                        <ul class="people-card__info">
+                            <li class="people-card__info-item people-card__info-item--id">
+                                <div class="people-card__info-item-caption">Идентификационный номер:</div>
+                                <span class="people-card__info-item-value">015684</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--inclusion">
+                                <div class="people-card__info-item-caption">Дата включения:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата выдачи свидетельства:</div>
+                                <span class="people-card__info-item-value">25.11.1956</span>
+                            </li>
+                            <li class="people-card__info-item people-card__info-item--qualification">
+                                <div class="people-card__info-item-caption">Наименование и уровень квалификации:</div>
+                                <span class="people-card__info-item-value">Организация выполнения работ по подготовке проектной документации</span>
+                            </li>
+                            <li class="people-card__info-item">
+                                <div class="people-card__info-item-caption">Дата внесения изменений:</div>
+                                <span class="people-card__info-item-value">13.10.2023</span>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+            </ul>
+            <button type="button" class="list__more">
+                <span class="list__more-text">Показать еще</span>
+                <span class="list__more-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5" fill="none">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M4.49992 3.17522L1.53337 0.258658C1.18258 -0.0862133 0.617333 -0.0862179 0.266542 0.258653C-0.0889593 0.608156 -0.0887355 1.17842 0.266542 1.52789L3.30086 4.511C3.96405 5.163 5.03578 5.16299 5.69897 4.511L8.73346 1.5278C9.08874 1.17833 9.08887 0.608156 8.73337 0.258653C8.38258 -0.0862179 7.81733 -0.0862178 7.46654 0.258653L4.49992 3.17522Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
