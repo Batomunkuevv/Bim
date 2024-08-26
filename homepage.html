@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>БИМ Ассоциация</title>
+    <meta name="description" content="Site description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="files/air-datepicker.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/favicons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/favicons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/favicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/favicons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/favicons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/favicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/favicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/favicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/favicons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="../../images/favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="site-header site-header--main">
+    <div class="container">
+        <div class="site-header__body">
+            <a href="#" class="site-header__logo">
+                <img src="images/logo-white.svg" alt="БИМ Logo" title="БИМ Logo" />
+            </a>
+            <nav class="site-header__menu menu">
+                <button type="button" class="site-header__menu-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path
+                            d="M0.730974 2.6025L19.3976 21.2692C19.6316 21.5265 19.959 21.6668 20.3333 21.6668C21.0585 21.6668 21.6666 21.0586 21.6666 20.3335C21.6666 19.9592 21.5263 19.6317 21.269 19.3978L2.60232 0.731155C2.3684 0.473846 2.04092 0.333496 1.66665 0.333496C0.9415 0.333496 0.333313 0.941683 0.333313 1.66683C0.333313 2.0411 0.473664 2.36858 0.730974 2.6025ZM19.3976 0.731155L0.730974 19.3978C0.473664 19.6317 0.333313 19.9592 0.333313 20.3335C0.333313 21.0586 0.9415 21.6668 1.66665 21.6668C2.04092 21.6668 2.3684 21.5265 2.60232 21.2692L21.269 2.6025C21.5263 2.36858 21.6666 2.0411 21.6666 1.66683C21.6666 0.941683 21.0585 0.333496 20.3333 0.333496C19.959 0.333496 19.6316 0.473846 19.3976 0.731155Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                </button>
+                <a href="#" class="site-header__menu-logo">
+                    <img src="images/logo.svg" alt="БИМ Logo" title="БИМ Logo" />
+                </a>
+                <ul class="menu__list">
+                    <li class="menu__item is-dropdown">
+                        <a href="#" class="menu__link">
+                            Об&#160;ассоциации
+                            <span class="menu__arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4" fill="none">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M0.11712 0.115203C0.27336 -0.0384008 0.526639 -0.0384008 0.682879 0.115203L3.71712 3.09832C3.87336 3.25184 4.12664 3.25184 4.2828 3.09832L7.31712 0.115203C7.47336 -0.0384008 7.72664 -0.0384008 7.88288 0.115203C8.03904 0.268727 8.03904 0.517733 7.88288 0.671336L4.84848 3.65445C4.37984 4.11518 3.62008 4.11518 3.15144 3.65445L0.11712 0.671336C-0.03904 0.517733 -0.03904 0.268727 0.11712 0.115203Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="menu__sublist">
+                            <li class="menu__subitem">
+                                <a href="#" class="menu__sublink">Как стать участником</a>
+                            </li>
+                            <li class="menu__subitem menu__subitem--on-main">
+                                <a href="#" class="menu__sublink">Документы</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item is-dropdown">
+                        <a href="#" class="menu__link">
+                            Что такое БИМ?
+                            <span class="menu__arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4" fill="none">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M0.11712 0.115203C0.27336 -0.0384008 0.526639 -0.0384008 0.682879 0.115203L3.71712 3.09832C3.87336 3.25184 4.12664 3.25184 4.2828 3.09832L7.31712 0.115203C7.47336 -0.0384008 7.72664 -0.0384008 7.88288 0.115203C8.03904 0.268727 8.03904 0.517733 7.88288 0.671336L4.84848 3.65445C4.37984 4.11518 3.62008 4.11518 3.15144 3.65445L0.11712 0.671336C-0.03904 0.517733 -0.03904 0.268727 0.11712 0.115203Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="menu__sublist">
+                            <li class="menu__subitem">
+                                <a href="#" class="menu__sublink">БИМ в&#160;документах</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link"> Пресс-центр</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link"> Стандартизация</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link"> Вакансии</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a href="#" class="menu__link"> Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="site-header__languages languages">
+                <button type="button" class="languages__current">
+                    RU
+                    <span class="languages__current-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8.49992 9.17522L5.53337 6.25866C5.18258 5.91379 4.61733 5.91378 4.26654 6.25865C3.91104 6.60816 3.91126 7.17842 4.26654 7.52789L7.30086 10.511C7.96405 11.163 9.03578 11.163 9.69897 10.511L12.7335 7.5278C13.0887 7.17833 13.0889 6.60816 12.7334 6.25865C12.3826 5.91378 11.8173 5.91378 11.4665 6.25865L8.49992 9.17522Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                    </span>
+                </button>
+                <ul class="languages__list">
+                    <li class="languages__item">
+                        <a href="#" class="languages__link">RU</a>
+                    </li>
+                    <li class="languages__item">
+                        <a href="#" class="languages__link">EN</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="site-header__burger burger">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+        <main class="site-page site-page--main">
+            <section class="hero-parallax">
+    <ul class="hero-parallax__scene scene">
+        <li class="scene__layer scene__layer--bg">
+            <div class="scene__bg">
+                <img src="images/blocks/hero-parallax/bg.jpg" alt="Background" title="Background" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--fog-under-all">
+            <div class="scene__fog-under-all">
+                <img src="images/blocks/hero-parallax/fog-under-all.png" alt="Fog under all" title="Fog under all" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--evolution">
+            <div class="scene__evolution">
+                <img src="images/blocks/hero-parallax/evolution.png" alt="Tower Evolution" title="Tower Evolution" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--right-buildings">
+            <div class="scene__right-buildings">
+                <img src="images/blocks/hero-parallax/right-buildings.png" alt="Right buildings" title="Right buildings" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--2000">
+            <div class="scene__2000">
+                <img src="images/blocks/hero-parallax/building-2000.png" alt="Tower 2000" title="Tower 2000" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--oko">
+            <div class="scene__oko">
+                <img src="images/blocks/hero-parallax/building-oko.png" alt="Building oko" title="Building oko" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--eurasia">
+            <div class="scene__eurasia">
+                <img src="images/blocks/hero-parallax/eurasia.png" alt="Eurasia Tower" title="Eurasia Tower" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--iq-big">
+            <div class="scene__iq-big">
+                <img src="images/blocks/hero-parallax/iq-big.png" alt="IQ Tower" title="IQ Tower" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--iq-small">
+            <div class="scene__iq-small">
+                <img src="images/blocks/hero-parallax/iq-small.png" alt="IQ Tower" title="IQ Tower" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--fog-center-left">
+            <div class="scene__fog-center-left">
+                <img src="images/blocks/hero-parallax/fog-center-left.png" alt="Fog center left" title="Fog center left" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--fog-center-right">
+            <div class="scene__fog-center-right">
+                <img src="images/blocks/hero-parallax/fog-center-right.png" alt="Fog center right" title="Fog center right" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--center-back-building">
+            <div class="scene__center-back-building">
+                <img src="images/blocks/hero-parallax/center-back-building.png" alt="Center back building" title="Center back building" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--title">
+            <div class="scene__title">
+                <h1 class="hero-parallax__title">BIM association</h1>
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--center-front-building">
+            <div class="scene__center-front-building">
+                <img src="images/blocks/hero-parallax/center-front-building.png" alt="Center front building" title="Center front building" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--fog-on-left">
+            <div class="scene__fog-on-left">
+                <img src="images/blocks/hero-parallax/fog-on-left.png" alt="Fog on left" title="Fog on left" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--fog-on-center">
+            <div class="scene__fog-on-center">
+                <img src="images/blocks/hero-parallax/fog-on-center.png" alt="Fog on center" title="Fog on center" />
+            </div>
+        </li>
+        <li class="scene__layer scene__layer--btn">
+            <div class="scene__btn">
+                <a href="#" class="hero-parallax__btn button">Стать участником</a>
+            </div>
+        </li>
+    </ul>
+</section>
+
+            <section class="hot-news">
+    <div class="container">
+        <h2 class="hot-news__title section-title">
+            Здесь и&#160;сейчас
+        </h2>
+        <ul class="hot-news__list">
+            <li class="hot-news__item">
+                <article class="hot-new">
+                    <a href="#" class="hot-new__link">
+                        <h3 class="hot-new__title">
+                            Дорожная карта BIM
+                        </h3>
+                        <p class="hot-new__excerpt">
+                            Первоочередная задача BIM-ассоциации решена! Принята дорожная карта внедрения технологий
+                            информационного&#8230;
+                        </p>
+                        <button type="button" class="hot-new__more">
+                            Подробнее
+                            <span class="hot-new__more-arrow arrow">
+                                <svg class="arrow__icon" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 7H17C17.5439 7 18 7.45614 18 8C18 8.54386 17.5439 9 17 9H1C0.456139 9 0 8.54386 0 8C0 7.45614 0.456139 7 1 7ZM9.29825 14.2982L16.193 7.40351C16.4211 7.17544 16.4211 8.82456 16.193 8.59649L9.29825 1.70175C9.10526 1.52632 9 1.2807 9 0.999999C9 0.45614 9.45614 0 10 0C10.2807 0 10.5263 0.105263 10.7018 0.298244L17.5965 7.19298C18.0526 7.63158 18.0526 8.36842 17.5965 8.80702L10.7018 15.7018C10.5263 15.8947 10.2807 16 10 16C9.45614 16 9 15.5439 9 15C9 14.7193 9.10526 14.4737 9.29825 14.2982Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                        </button>
+                    </a>
+                </article>
+            </li>
+            <li class="hot-news__item">
+                <article class="hot-new">
+                    <a href="#" class="hot-new__link">
+                        <h3 class="hot-new__title">
+                            Горячая вакансия
+                        </h3>
+                        <p class="hot-new__excerpt">
+                            BIM-Ассоциация приглашает на&#160;работу специалиста с&#160;глубокими знаниями в&#160;области
+                            BIM-технологий и&#160;стандартизации&#8230;
+                        </p>
+                        <button type="button" class="hot-new__more">
+                            Подробнее
+                            <span class="hot-new__more-arrow arrow">
+                                <svg class="arrow__icon" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 7H17C17.5439 7 18 7.45614 18 8C18 8.54386 17.5439 9 17 9H1C0.456139 9 0 8.54386 0 8C0 7.45614 0.456139 7 1 7ZM9.29825 14.2982L16.193 7.40351C16.4211 7.17544 16.4211 8.82456 16.193 8.59649L9.29825 1.70175C9.10526 1.52632 9 1.2807 9 0.999999C9 0.45614 9.45614 0 10 0C10.2807 0 10.5263 0.105263 10.7018 0.298244L17.5965 7.19298C18.0526 7.63158 18.0526 8.36842 17.5965 8.80702L10.7018 15.7018C10.5263 15.8947 10.2807 16 10 16C9.45614 16 9 15.5439 9 15C9 14.7193 9.10526 14.4737 9.29825 14.2982Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                        </button>
+                    </a>
+                </article>
+            </li>
+            <li class="hot-news__item">
+                <article class="hot-new">
+                    <a href="#" class="hot-new__link">
+                        <h3 class="hot-new__title">
+                            Технический комитет профессионалов
+                        </h3>
+                        <p class="hot-new__excerpt">
+                            На&#160;базе BIM-Ассоциации создан и&#160;работает Проектный технический комитет по&#160;стандартизации
+                            &#171;Технологии информац&#8230;
+                        </p>
+                        <button type="button" class="hot-new__more">
+                            Подробнее
+                            <span class="hot-new__more-arrow arrow">
+                                <svg class="arrow__icon" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 7H17C17.5439 7 18 7.45614 18 8C18 8.54386 17.5439 9 17 9H1C0.456139 9 0 8.54386 0 8C0 7.45614 0.456139 7 1 7ZM9.29825 14.2982L16.193 7.40351C16.4211 7.17544 16.4211 8.82456 16.193 8.59649L9.29825 1.70175C9.10526 1.52632 9 1.2807 9 0.999999C9 0.45614 9.45614 0 10 0C10.2807 0 10.5263 0.105263 10.7018 0.298244L17.5965 7.19298C18.0526 7.63158 18.0526 8.36842 17.5965 8.80702L10.7018 15.7018C10.5263 15.8947 10.2807 16 10 16C9.45614 16 9 15.5439 9 15C9 14.7193 9.10526 14.4737 9.29825 14.2982Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                        </button>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </div>
+</section>
+            <section class="latest-news">
+    <div class="container">
+        <h2 class="latest-news__title section-title">Последние новости</h2>
+        <ul class="latest-news__list">
+            <li class="latest-news__item">
+                <article class="new">
+                    <a href="#" class="new__link">
+                        <time class="new__date" datetime="2023-09-19">19&#160;сентября, 2023</time>
+                        <h3 class="new__title">
+                            Создание центра оценки квалификации<br />
+                            по&#160;профессиональному стандарту
+                        </h3>
+                        <div class="new__image">
+                            <img data-lozad src="images/placeholder.png" data-src="images/blocks/latest-news/01.jpg" alt="Image" title="Image" />
+                        </div>
+                        <p class="new__excerpt">
+                            22&#160;июня 2022&#160;г. на&#160;заседании Совета по&#160;профессиональным квалификациям в&#160;области инженерных изысканий, градостроительства, архитектурно-строительного проектирования было
+                            принято одно из&#160;ключевых решений для развития кадров в&#160;строительстве. В&#160;рамках голосования было&#8230;
+                        </p>
+                        <button type="button" class="new__more">Узнать больше</button>
+                        <div class="new__line"></div>
+                    </a>
+                </article>
+            </li>
+            <li class="latest-news__item">
+                <article class="new">
+                    <a href="#" class="new__link">
+                        <time class="new__date" datetime="2023-09-18">18&#160;сентября, 2023</time>
+                        <h3 class="new__title">БИМ-Ассоциация и&#160;НОСТРОЙ начнут сотрудничество в&#160;сфере развития технологий информационного моделирования</h3>
+                        <div class="new__image">
+                            <img data-lozad src="images/placeholder.png" data-src="images/blocks/latest-news/02.jpg" alt="Image" title="Image" />
+                        </div>
+                        <p class="new__excerpt">
+                            Президент Ассоциации организаций по&#160;развитию технологий информационного моделирования в&#160;строительстве и&#160;ЖКХ (&#171;БИМ-Ассоциация&#187;) Александра Никульцева и&#160;Президент
+                            Национального объединения строителей (НОСТРОЙ) Антон Глушков и&#160;подписали Соглашение о&#160;сотрудничестве&#8230;
+                        </p>
+                        <button type="button" class="new__more">Узнать больше</button>
+                        <div class="new__line"></div>
+                    </a>
+                </article>
+            </li>
+            <li class="latest-news__item">
+                <article class="new">
+                    <a href="#" class="new__link">
+                        <time class="new__date" datetime="2023-09-15">15&#160;сентября, 2023</time>
+                        <h3 class="new__title">
+                            БИМ-Ассоциация, ЭТП ГПБ и&#160;ЗИС создадут цифровую<br />
+                            БИМ-платформу Санкт-Петербурга
+                        </h3>
+                        <div class="new__image">
+                            <img data-lozad src="images/placeholder.png" data-src="images/blocks/latest-news/03.jpg" alt="Image" title="Image" />
+                        </div>
+                        <p class="new__excerpt">
+                            7&#160;октября 2021 года Ассоциация организаций по&#160;развитию технологий информационного моделирования в&#160;строительстве и&#160;ЖКХ (БИМ-Ассоциация), Электронная торговая площадка
+                            Газпромбанка (ЭТП ГПБ) и&#160;компания &#171;Заказные ИнформСистемы&#187; (ЗИС) заключили соглашение&#8230;
+                        </p>
+                        <button type="button" class="new__more">Узнать больше</button>
+                        <div class="new__line"></div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+        <a href="#" class="latest-news__more button">Посмотреть все новости</a>
+    </div>
+</section>
+
+        </main>
+        <footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__body">
+            <div class="site-footer__left">
+                <a href="/" class="site-footer__logo">
+                    <img data-lozad src="images/placeholder.png" data-src="images/logo-white.svg" alt="БИМ logo" title="БИМ logo" />
+                </a>
+                <p class="site-footer__copyright">&#169; Ассоциация организаций по&#160;развитию технологий информационного моделирования  в&#160;строительстве и&#160;ЖКХ (БИМ-Ассоциация)</p>
+            </div>
+            <nav class="site-footer__menu footer-menu">
+                <div class="footer-menu__column">
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Об&#160;ассоциации</a>
+                            <ul class="footer-menu__sublist">
+                                <li class="footer-menu__subitem">
+                                    <a href="#" class="footer-menu__sublink">
+                                        <span class="footer-menu__sublink-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" viewBox="0 0 5 10" fill="none">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M0.144003 9.8536C-0.0480011 9.6583 -0.0480011 9.3417 0.144003 9.1464L3.8729 5.3536C4.0648 5.1583 4.0648 4.8417 3.8729 4.6465L0.144003 0.8536C-0.0480011 0.658299 -0.0480011 0.341701 0.144003 0.1464C0.335909 -0.0487995 0.647166 -0.0487995 0.839171 0.1464L4.56806 3.9394C5.14398 4.5252 5.14398 5.4749 4.56806 6.0607L0.839171 9.8536C0.647166 10.0488 0.335909 10.0488 0.144003 9.8536Z"
+                                                    fill="currentColor"
+                                                />
+                                            </svg>
+                                        </span>
+                                        Как стать участником
+                                    </a>
+                                </li>
+                                <li class="footer-menu__subitem">
+                                    <a href="#" class="footer-menu__sublink">
+                                        <span class="footer-menu__sublink-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" viewBox="0 0 5 10" fill="none">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M0.144003 9.8536C-0.0480011 9.6583 -0.0480011 9.3417 0.144003 9.1464L3.8729 5.3536C4.0648 5.1583 4.0648 4.8417 3.8729 4.6465L0.144003 0.8536C-0.0480011 0.658299 -0.0480011 0.341701 0.144003 0.1464C0.335909 -0.0487995 0.647166 -0.0487995 0.839171 0.1464L4.56806 3.9394C5.14398 4.5252 5.14398 5.4749 4.56806 6.0607L0.839171 9.8536C0.647166 10.0488 0.335909 10.0488 0.144003 9.8536Z"
+                                                    fill="currentColor"
+                                                />
+                                            </svg>
+                                        </span>
+                                        Документы
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Что такое БИМ?</a>
+                            <ul class="footer-menu__sublist">
+                                <li class="footer-menu__subitem">
+                                    <a href="#" class="footer-menu__sublink">
+                                        <span class="footer-menu__sublink-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" viewBox="0 0 5 10" fill="none">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M0.144003 9.8536C-0.0480011 9.6583 -0.0480011 9.3417 0.144003 9.1464L3.8729 5.3536C4.0648 5.1583 4.0648 4.8417 3.8729 4.6465L0.144003 0.8536C-0.0480011 0.658299 -0.0480011 0.341701 0.144003 0.1464C0.335909 -0.0487995 0.647166 -0.0487995 0.839171 0.1464L4.56806 3.9394C5.14398 4.5252 5.14398 5.4749 4.56806 6.0607L0.839171 9.8536C0.647166 10.0488 0.335909 10.0488 0.144003 9.8536Z"
+                                                    fill="currentColor"
+                                                />
+                                            </svg>
+                                        </span>
+                                        БИМ в&#160;документах</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu__column">
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Пресс-центр</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Вакансии</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Стандартизация</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="site-footer__right">
+                <form action="#" class="site-footer__search search">
+                    <input type="search" placeholder="Поиск по сайту" class="search__input" />
+                    <button class="search__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M7.11111 12.4444C4.03899 12.4444 1.77778 10.1832 1.77778 7.11111C1.77778 4.03899 4.03899 1.77778 7.11111 1.77778C10.1832 1.77778 12.4444 4.03899 12.4444 7.11111C12.4444 10.1832 10.1832 12.4444 7.11111 12.4444ZM7.11111 14.2222C11.0565 14.2222 14.2222 11.0565 14.2222 7.11111C14.2222 3.16569 11.0565 0 7.11111 0C3.16569 0 0 3.16569 0 7.11111C0 11.0565 3.16569 14.2222 7.11111 14.2222ZM15.7349 14.4873L12.1793 10.9318C12.0234 10.7602 11.8051 10.6667 11.5556 10.6667C11.0721 10.6667 10.6667 11.0721 10.6667 11.5556C10.6667 11.8051 10.7602 12.0234 10.9318 12.1793L14.4873 15.7349C14.6433 15.9064 14.8616 16 15.1111 16C15.5945 16 16 15.5945 16 15.1111C16 14.8616 15.9064 14.6433 15.7349 14.4873Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                    </button>
+                </form>
+                <p class="site-footer__disclaimer">
+                    Информация на&#160;данном сайте не&#160;является<br />
+                    публичной офертой ни&#160;при каких обстоятельствах.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script defer src="js/lozad.min.js"></script>
+    <script defer src="js/script.js"></script>
+</body>
+
+</html>
