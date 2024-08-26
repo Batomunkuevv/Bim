@@ -54,7 +54,7 @@
     height: 100%;
     transition: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
     perspective: 1000px;
-    transform: rotateX(var(--move-x)) rotateY(var(--move-y)) translate3d(0, 0, 0);
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x)) translate3d(0, 0, 0);
     transform-style: preserve-3d;
     backface-visibility: hidden;
     will-change: transform;

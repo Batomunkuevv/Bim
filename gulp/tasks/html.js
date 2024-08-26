@@ -1,4 +1,16 @@
-import fileinclude from "gulp-file-include"
+import fileinclude from "gulp-file-include";
+import typograf from 'gulp-typograf';
+
+const typografOptions = {
+  locale: ['ru', 'en-US'],
+  htmlEntity: { type: 'digit' },
+  disableRule: ['ru/optalign/*'],
+  enableRule: ['ru/money/ruble'],
+  safeTags: [
+    ['<\\?php', '\\?>'],
+    ['<no-typography>', '</no-typography>']
+  ]
+}
 
 export const html = () => {
   return app.gulp.src(app.path.src.html)
@@ -12,6 +24,7 @@ export const html = () => {
 
     .pipe(fileinclude())
     .pipe(app.plugins.replace(/@img\//g, 'images/'))
+    .pipe(typograf(typografOptions))
 
 
     .pipe(app.gulp.dest(app.path.build.html))

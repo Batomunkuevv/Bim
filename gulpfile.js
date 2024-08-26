@@ -12,6 +12,7 @@ global.app = {
 };
 
 // Импорт задач
+import { moveProjectTable } from "./gulp/tasks/moveProjectTable.js";
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
@@ -25,6 +26,7 @@ import { ftp } from "./gulp/tasks/ftp.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
+    gulp.watch(path.watch.projectTable, moveProjectTable);
     gulp.watch(path.watch.files, copy);
     gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.scss, scss);
@@ -35,7 +37,7 @@ function watcher() {
 // Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 // Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, moveProjectTable, html, scss, js, images));
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);

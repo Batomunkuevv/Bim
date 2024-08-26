@@ -4,5 +4,7 @@ dist
 node_modules
 package-lock.json
 gulp/version.json
+src/project-table
+src/index.html
 
 src/.temporary_cache

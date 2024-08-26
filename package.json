@@ -1,7 +1,7 @@
 {
-  "name": "gulp-2022",
+  "name": "gulp-2024",
   "version": "1.0.0",
-  "description": "Сборка Gulp+Webpack+Babel. С уклоном под верстальщиков",
+  "description": "Сборка Gulp",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
@@ -13,10 +13,6 @@
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Batomunkuevv/forza.git"
-  },
   "keywords": [
     "gulp",
     "webpack",
@@ -25,12 +21,8 @@
     "scss",
     "html"
   ],
-  "author": "Sergei Chevdar <serj.elessar@gmail.com>",
+  "author": "Kirill Batomunkuev <i@batomunkuevv.ru>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/StarkElessar/gulp-2022/issues"
-  },
-  "homepage": "https://github.com/StarkElessar/gulp-2022#readme",
   "devDependencies": {
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
@@ -55,6 +47,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
+    "gulp-typograf": "^4.1.0",
     "gulp-util": "^3.0.8",
     "gulp-version-number": "^0.2.4",
     "gulp-zip": "^5.1.0",
@@ -62,10 +55,11 @@
     "imagemin-jpegtran": "latest",
     "imagemin-pngquant": "latest",
     "imagemin-svgo": "latest",
-    "sass": "^1.45.1",
+    "sass": "latest",
     "swiper": "^7.3.4",
     "vinyl-ftp": "^0.6.1",
     "webpack": "^5.65.0",
-    "webpack-stream": "^7.0.0"
+    "webpack-stream": "^7.0.0",
+    "gulp-fonter-2": "^0.3.0"
   }
 }
