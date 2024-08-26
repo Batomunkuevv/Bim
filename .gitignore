@@ -8,3 +8,5 @@ src/project-table
 src/index.html
 
 src/.temporary_cache
+
+.DS_Store
